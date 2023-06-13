@@ -19,8 +19,8 @@ function NavBar() {
                     <Button color="inherit" component={RouterLink} to="/events">Events</Button>
                     <Button color="inherit" component={RouterLink} to="/teams">Teams</Button>
                 </Box>
-                <Box display="flex" justifyContent="center" flexGrow={1}>
-                    <Button color="inherit" component="a" href="https://community.case.edu/MedWish/club_signup" target="_blank" rel="noopener noreferrer">Join Us</Button>
+                <Box display="flex" justifyContent="right" flexGrow={1}>
+                    <Button color="inherit" component="a" href="https://community.case.edu/MedWish/club_signup" target="_blank" rel="noopener noreferrer">Join</Button>
                 </Box>
             </Toolbar>
         </AppBar>
