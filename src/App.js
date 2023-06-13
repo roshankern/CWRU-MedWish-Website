@@ -1,23 +1,20 @@
-// import packages
+// App.js
 import React from "react";
+import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
-// import components
 import NavBar from "./components/NavBar";
-
-// import pages
 import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import EventsPage from "./pages/EventsPage";
 import TeamsPage from "./pages/TeamPage";
+import theme from "./theme";
 
 function App() {
   return (
-    <Router>
-      <div>
+    <ThemeProvider theme={theme}>
+      <Router>
         <NavBar />
-
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -25,8 +22,8 @@ function App() {
           <Route path="/events" element={<EventsPage />} />
           <Route path="/teams" element={<TeamsPage />} />
         </Routes>
-      </div>
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 }
 
