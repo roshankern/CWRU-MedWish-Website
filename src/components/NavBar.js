@@ -14,10 +14,10 @@ function NavBar() {
                     <Button color="inherit" component={RouterLink} to="/">Home</Button>
                 </Box>
                 <Box display="flex" justifyContent="center" flexGrow={1}>
-                    <Button color="inherit" component={RouterLink} to="/about">About</Button>
-                    <Button color="inherit" component={RouterLink} to="/projects">Projects</Button>
-                    <Button color="inherit" component={RouterLink} to="/events">Events</Button>
-                    <Button color="inherit" component={RouterLink} to="/teams">Teams</Button>
+                    <Button color="inherit" component={RouterLink} to="/about" sx={{ textTransform: 'none' }}>About</Button>
+                    <Button color="inherit" component={RouterLink} to="/projects" sx={{ textTransform: 'none' }}>Projects</Button>
+                    <Button color="inherit" component={RouterLink} to="/events" sx={{ textTransform: 'none' }}>Events</Button>
+                    <Button color="inherit" component={RouterLink} to="/teams" sx={{ textTransform: 'none' }}>Teams</Button>
                 </Box>
                 <Box display="flex" justifyContent="right" flexGrow={1}>
                     <Button color="inherit" component="a" href="https://community.case.edu/MedWish/club_signup" target="_blank" rel="noopener noreferrer">Join</Button>

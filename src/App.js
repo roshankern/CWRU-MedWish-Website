@@ -3,11 +3,11 @@ import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import HomePage from "./pages/HomePage";
-import AboutPage from "./pages/AboutPage";
-import ProjectsPage from "./pages/ProjectsPage";
-import EventsPage from "./pages/EventsPage";
-import TeamsPage from "./pages/TeamPage";
+import HomePage from "./pages/HomePage/HomePage.js";
+import AboutPage from "./pages/AboutPage/AboutPage.js";
+import ProjectsPage from "./pages/ProjectsPage/ProjectsPage.js";
+import EventsPage from "./pages/EventsPage/EventsPage.js";
+import TeamsPage from "./pages/TeamPage/TeamPage.js";
 import theme from "./theme";
 
 function App() {
