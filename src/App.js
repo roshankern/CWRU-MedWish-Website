@@ -7,7 +7,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ProjectsPage from "./pages/ProjectsPage";
 import EventsPage from "./pages/EventsPage";
-import TeamsPage from "./pages/TeamPage";
+import TeamPage from "./pages/TeamPage";
 import theme from "./theme";
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/teams" element={<TeamsPage />} />
+          <Route path="/teams" element={<TeamPage />} />
         </Routes>
       </Router>
     </ThemeProvider>
