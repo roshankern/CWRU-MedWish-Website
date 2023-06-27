@@ -1,7 +1,7 @@
 // AboutPage.js
 import React from "react";
 import { Card, CardMedia, Typography, Divider } from '@mui/material';
-import About from './Images/About.png';
+import About from '../Images/About.png';
 
 function AboutPage() {
     return (
