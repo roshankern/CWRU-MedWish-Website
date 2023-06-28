@@ -1,18 +1,16 @@
-// AboutPage.js
+// TeamPage.js
 import React from "react";
 import "./TeamPage.css"; 
+import TeamHeaderPhoto from "./images/TeamHeaderPhoto.png"; // add this line
 
 function TeamPage() {
     return (
         <div className="TeamPage"> 
             <header className="TeamPage-header">
-                
                 <div className="image-overlay"></div> 
-                {/*<img style={{ width: "100%", height: "auto" }} src="\TeamHeaderPhoto.png" alt="Header" /> */}
-
                 <img
                     style={{ width: "100%", height: "auto" }}
-                    src="/TeamHeaderPhoto.png"
+                    src={TeamHeaderPhoto} // use the imported image here
                     alt="Header"
                 />
 
