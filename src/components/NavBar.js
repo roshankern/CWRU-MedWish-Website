@@ -22,7 +22,7 @@ function NavBar() {
                     <Divider />
                     <Button color="secondary" component={RouterLink} to="/events" sx={{ textTransform: 'none' }}>Events</Button>
                     <Divider />
-                    <Button color="secondary" component={RouterLink} to="/teams" sx={{ textTransform: 'none' }}>Team</Button>
+                    <Button color="secondary" component={RouterLink} to="/team" sx={{ textTransform: 'none' }}>Team</Button>
                 </Box>
                 <Box display="flex" justifyContent="right" flexGrow={1}>
                     <Button color="secondary" component="a" href="https://community.case.edu/MedWish/club_signup" target="_blank" rel="noopener noreferrer">Join</Button>

@@ -1,0 +1,60 @@
+.TeamPage {
+    text-align: center;
+    position: relative; 
+  }
+  
+  .TeamPage-header {
+    position: relative;
+  }
+  
+  .header-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .image-container {
+    /*max-width: 100%;
+    height: auto;*/
+    position: relative; 
+    overflow: hidden; 
+  }
+
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  }
+
+  .team-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Horizontally center the text */
+    margin: 16px 0; /* Add spacing above and below the text */
+    color: white; 
+    font-size: 40px; 
+  }
+
+  .horizontal-center-text {
+    text-align: center; /* Horizontally center the text */
+    margin: 16px 0; /* Add spacing above and below the text */
+    font-size: 20px; 
+    margin-left: 100px; 
+    margin-right: 100px; 
+  }
+  
+  .spacer-line {
+    text-align: center; 
+    width: 95%;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto; 
+  }
+
+  .spacer {
+    height: 16px; 
+  }

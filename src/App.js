@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar.js";
-import Footer from "./components/Footer.js"; // Import the Footer component
+import Footer from "./components/Footer.js";
 import HomePage from "./pages/HomePage/HomePage.js";
 import AboutPage from "./pages/AboutPage/AboutPage.js";
 import ProjectsPage from "./pages/ProjectsPage/ProjectsPage.js";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/events" element={<EventsPage />} />
-          <Route path="/teams" element={<TeamsPage />} />
+          <Route path="/team" element={<TeamsPage />} />
         </Routes>
         <Footer />
       </Router>
