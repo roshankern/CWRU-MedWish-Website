@@ -14,7 +14,6 @@ function Footer() {
       color="primary.contrastText" 
       py={2}
       borderTop={1}
-      borderBottom={1}
       borderColor="black"
     >
       <Typography variant="body1" component="span" mx={2}>Instagram</Typography>
