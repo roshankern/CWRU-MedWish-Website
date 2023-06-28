@@ -5,7 +5,7 @@ import 'typeface-work-sans';
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#6599CC', // MedWish light blue
+            main: '#E1F0FF', // MedWish light blue
         },
         secondary: {
             main: '#00355E', // MedWish dark blue
