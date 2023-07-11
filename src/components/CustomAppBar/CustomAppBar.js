@@ -5,6 +5,7 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
+import MedWishLogo from './CustomAppBar_MedWishLogo.png';
 
 const Divider = () => <Box borderRight={1} borderColor="black" mx={2} />;
 
@@ -32,7 +33,9 @@ function CustomAppBar() {
         <AppBar position="fixed" style={{ top: show ? '0' : '-75px', transition: 'top 0.3s' }}>
             <Toolbar>
                 <Box display="flex" justifyContent="left" flexGrow={1}>
-                    <Button color="secondary" component={RouterLink} to="/">Home</Button>
+                    <Button color="secondary" component={RouterLink} to="/">
+                        <img src={MedWishLogo} alt="MedWish Logo" />
+                    </Button>
                 </Box>
                 <Box display="flex" justifyContent="center" flexGrow={1}>
                     <Button color="secondary" component={RouterLink} to="/about" sx={{ textTransform: 'none' }}>About</Button>
