@@ -33,12 +33,9 @@ function CustomAppBar() {
         <AppBar position="fixed" style={{ top: show ? '0' : '-75px', transition: 'top 0.3s' }}>
             <Toolbar>
                 <Box display="flex" justifyContent="left" flexGrow={1}>
-                <Button color="secondary" component={RouterLink} to="/">
-    <img src={MedWishLogo} alt="MedWish Logo" style={{height: "50px", objectFit: 'contain'}} />
-</Button>
-
-
+                    <Button color="secondary" component={RouterLink} to="/" startIcon={<img src={MedWishLogo} alt="MedWish Logo" style={{ height: "50px", objectFit: 'contain' }} />} />
                 </Box>
+
                 <Box display="flex" justifyContent="center" flexGrow={1}>
                     <Button color="secondary" component={RouterLink} to="/about" sx={{ textTransform: 'none' }}>About</Button>
                     <Divider />
