@@ -1,77 +1,152 @@
-// ProjectsPage.js
 import React from "react";
-import "./ProjectsPage.css"; // Import the CSS file for styling
+import { Card, CardMedia, Typography, Divider, Grid, Box } from '@mui/material';
+import ProjectImage from './images/ProjectImage.png';
+import Biosensor from './images/Biosensor.png';
+import Documentation from './images/Documentation.png';
+import Placeholder1 from './images/Placeholder1.png';
+import Placeholder2 from './images/Placeholder2.png';
 
 
 function ProjectsPage() {
-    return (
-        <div className="projects-page">
-            <img src="../assets/ProjectImage.png" alt="Cover Picture" />
-            <hr className="line" />
-            <div className="content">
-                <p className="text">
-                    Members of CWRU MedWish embark on ambitious projects which require the skills and experience they have acquired in class. These projects reinforce this information in an experiential way and allow members to practice planning, communication, and teamwork. Check out some of our current projects below!
-                </p>
-                <hr className="line" />
-            </div>
-            <div className="project">
-                <div className="project-content">
-                    <div className="project-image">
-                        <img src="../assets/Documentation.png" alt="Documentation" />
-                    </div>
-                    <div className="project-details">
-                        <div className="heading-container">
-                            <h3>Documentation</h3>
-                            <hr className="line" />
-                        </div>
-                        <p>The Boomerang Nebula, located roughly 5,000 light-years away from our solar system, has a temperature of 1 Kelvin (-272 °C or -460 °F) making it the coldest natural place in the universe humanity has discovered. First found in 1995 by astronomers in Chile, we have     </p>
-                    </div>
-                </div>
-            </div>
-            <div className="project reverse-layout">
-                <div className="project-content">
-                    <div className="project-image">
-                        <img src="../assets/Biosensor.png" alt="Biosensor" />
-                    </div>
-                    <div className="project-details">
-                        <div className="heading-container">
-                            <h3>Biosensor</h3>
-                            <hr className="line" />
-                        </div>
-                        <p>The tenth largest city in the United States with a population of over 1 million,San José, California resides on the southernmost edge of the Silicon Valley. Though high-tech narratives often subsume this region,a closer examination of San José’s (sub)urban </p>
-                    </div>
-                </div>
-            </div>
-            <div className="project">
-                <div className="project-content">
-                    <div className="project-image">
-                        <img src="../assets/Placeholder1.png" alt="Placeholder1" />
-                    </div>
-                    <div className="project-details">
-                        <div className="heading-container">
-                            <h3>Placeholder1</h3>
-                            <hr className="line" />
-                        </div>
-                        <p>landscape reveals the presence of over 100 boba shopsand their multiethnic community of local patrons. Boba, a milk tea beverage which originated in Taiwan in the 1980s, made its U.S. debut in the late 1990s when Taiwanese American entrepreneurs aimed to emulate Taiwan’s unique boba</p>
-                    </div>
-                </div>
-            </div>
-            <div className="project reverse-layout">
-                <div className="project-content">
-                    <div className="project-image">
-                        <img src="../assets/Placeholder2.png" alt="Placeholder2" />
-                    </div>
-                    <div className="project-details">
-                        <div className="heading-container">
-                            <h3>Placeholder2</h3>
-                            <hr className="line" />
-                        </div>
-                        <p>shop experience in their American hometowns. Over the past 20 years, boba within the United States has morphed into a distinctly Asian American cultural phenomenon, which I argue makes boba a unique lens by which to examine Asian American youth culture.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div>
+    {/* Project Image */}
+    <Card>
+        <CardMedia 
+        component= "img"
+        alt= "Project Background Image"
+        height= "500"   
+        image= { ProjectImage }
+        style = {{opacity: 1, zIndex: -1}}
+        />
+      </Card>
+    {/* Project Page Description */}
+    <Divider style= {{borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin:'30px 0', color: 'white' }}/>
+    <Box m={4} style={{ margin: '0 auto', maxWidth: '60%' }}>
+      <Typography variant="h6" align="center">
+        Members of CWRU MedWish embark on ambitious projects which require the skills and experience they have acquired in class. These projects reinforce this information in an experiential way and allow members to practice planning, communication, and teamwork. Check out some of our current projects below!
+      </Typography>
+    </Box>
+    <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '30px 0', color: 'white' }} />
+      
+      {/* Documentation */}
+      {/* Image on left*/}
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+            <CardMedia 
+              component= "img"
+              alt= "Documentation"
+              image= { Documentation }
+              style = {{opacity: 1, zIndex: -1}}
+            />
+            </Card>
+        </Grid>
+        {/* Text on right */}
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+          <Box display="flex" alignItems="center" mb={2}>
+              <Typography variant="h1" component="div" style={{ color: "#22495F", fontWeight: "bold" }}>
+              Documentation
+            </Typography>
+            <Divider flexItem style={{ flexGrow: 1, marginLeft: "16px", height: '50%', alignSelf: 'center', borderTopWidth: '2px', borderColor: "black"}} />
+          </Box>
+          <Typography variant="h5" component="div">
+            <Box>The Boomerang Nebula, located roughly 5,000 light-years away from our solar system, has a temperature of 1 Kelvin (-272 °C or -460 °F) making it the coldest natural place in the universe humanity has discovered. First found in 1995 by astronomers in Chile, we have </Box>
+            </Typography>
+          </Card>
+        </Grid>
+      </Grid>
+
+      {/* Biosensor */}
+      {/* Text on left */}
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+          <Box display="flex" alignItems="center" mb={2}>
+              <Typography variant="h1" component="div" style={{ color: "#22495F", fontWeight: "bold" }}>
+              Biosensor
+            </Typography>
+            <Divider flexItem style={{ flexGrow: 1, marginLeft: "16px", height: '50%', alignSelf: 'center', borderTopWidth: '2px', borderColor: "black"}} />
+          </Box>
+          <Typography variant="h5" component="div">
+            <Box>The Boomerang Nebula, located roughly 5,000 light-years away from our solar system, has a temperature of 1 Kelvin (-272 °C or -460 °F) making it the coldest natural place in the universe humanity has discovered. First found in 1995 by astronomers in Chile, we have </Box>
+            </Typography>
+          </Card>
+        </Grid>
+        {/* Image on right */}
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+            <CardMedia 
+              component= "img"
+              alt= "Biosensor"
+              image= { Biosensor }
+              style = {{opacity: 1, zIndex: -1}}
+            />
+            </Card>
+        </Grid>
+      </Grid>
+
+      {/* Placeholder1 */}
+      {/* Image on left*/}
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+            <CardMedia 
+              component= "img"
+              alt= "Placeholder1"
+              image= { Placeholder1 }
+              style = {{opacity: 1, zIndex: -1}}
+            />
+            </Card>
+        </Grid>
+        {/* Text on right */}
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+          <Box display="flex" alignItems="center" mb={2}>
+              <Typography variant="h1" component="div" style={{ color: "#22495F", fontWeight: "bold" }}>
+              Placeholder1
+            </Typography>
+            <Divider flexItem style={{ flexGrow: 1, marginLeft: "16px", height: '50%', alignSelf: 'center', borderTopWidth: '2px', borderColor: "black"}} />
+          </Box>
+          <Typography variant="h5" component="div">
+            <Box>The Boomerang Nebula, located roughly 5,000 light-years away from our solar system, has a temperature of 1 Kelvin (-272 °C or -460 °F) making it the coldest natural place in the universe humanity has discovered. First found in 1995 by astronomers in Chile, we have </Box>
+            </Typography>
+          </Card>
+        </Grid>
+      </Grid>
+
+      {/* Placeholder2 */}
+      {/* Text on left */}
+      <Grid container spacing={2}>
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+          <Box display="flex" alignItems="center" mb={2}>
+              <Typography variant="h1" component="div" style={{ color: "#22495F", fontWeight: "bold" }}>
+              Placeholder2
+            </Typography>
+            <Divider flexItem style={{ flexGrow: 1, marginLeft: "16px", height: '50%', alignSelf: 'center', borderTopWidth: '2px', borderColor: "black"}} />
+          </Box>
+          <Typography variant="h5" component="div">
+            <Box>The Boomerang Nebula, located roughly 5,000 light-years away from our solar system, has a temperature of 1 Kelvin (-272 °C or -460 °F) making it the coldest natural place in the universe humanity has discovered. First found in 1995 by astronomers in Chile, we have </Box>
+            </Typography>
+          </Card>
+        </Grid>
+        {/* Image on right */}
+        <Grid item xs={12} md={6}>
+          <Card style={{ padding: "76px", boxShadow : "none"}}>
+            <CardMedia 
+              component= "img"
+              alt= "Placeholder2" 
+              image= { Placeholder2 }
+              style = {{opacity: 1, zIndex: -1}}
+            />
+            </Card>
+        </Grid>
+      </Grid>
+      </div>
+
+  );
 }
 
 export default ProjectsPage;
