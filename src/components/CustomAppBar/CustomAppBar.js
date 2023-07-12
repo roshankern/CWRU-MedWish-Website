@@ -10,27 +10,8 @@ import MedWishLogo from './CustomAppBar_MedWishLogo.png';
 const Divider = () => <Box borderRight={1} borderColor="black" mx={2} />;
 
 function CustomAppBar() {
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
-    const [show, setShow] = useState(true);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            const visible = prevScrollPos > currentScrollPos;
-
-            setPrevScrollPos(currentScrollPos);
-            setShow(visible);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, [prevScrollPos]);
-
     return (
-        <AppBar position="fixed" style={{ top: show ? '0' : '-75px', transition: 'top 0.3s' }}>
+        <AppBar position="static">
             <Toolbar>
                 <Box display="flex" justifyContent="left" flexGrow={1}>
                     <Button color="secondary" component={RouterLink} to="/" startIcon={<img src={MedWishLogo} alt="MedWish Logo" style={{ height: "50px", objectFit: 'contain' }} />} />
