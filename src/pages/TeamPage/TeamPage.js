@@ -1,40 +1,158 @@
-// AboutPage.js
-import React from "react";
+// AboutPage.js 
+import React, { useState, useEffect } from "react";
+import { Card, CardMedia, Typography, Divider, Grid, Box, IconButton, CardContent } from '@mui/material';
 import "./TeamPage.css"; 
+import teamHeaderImage from './teamHeader.png';
+import TeamCard from './TeamCard';
 
 function TeamPage() {
-    return (
-        <div className="TeamPage"> 
-            <header className="TeamPage-header">
+  /**
+   * Fetch data from Google Sheets
+   */
+
+  const contactUs_link = "cwrumedwish-exec@case.edu"; 
+  
+  const [events, setEvents] = useState([]);
+
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const response = await fetch(
+          "	https://sheetdb.io/api/v1/i5h3kdf9o09sd"
+        );
+        const data = await response.json();
+        setEvents(data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchEvents();
+  }, []);
+    
+  return (
+    <div className="TeamPage"> 
+      
+      <img src={teamHeaderImage} className="header-image" alt="Header"/> 
+
+      <div className="spacer"></div>
+      <div className="spacer-line"> </div>
                 
-                <div className="image-overlay"></div> 
-                {/*<img style={{ width: "100%", height: "auto" }} src="\TeamHeaderPhoto.png" alt="Header" /> */}
+      <div className="text">
+        <p>CWRU MedWish is empowered by its executive board, faculty advisors, MedWish International mentors, and all of its members! Check out our team below.</p>
+      </div>
 
-                <img
-                    style={{ width: "100%", height: "auto" }}
-                    src="/TeamHeaderPhoto.png"
-                    alt="Header"
-                />
+      <div className="spacer-line"></div>
+      <div className="spacer"></div>
 
-                <div className="team-text">
-                <h1>Team</h1>
-                </div>
-            </header> 
-
-            <div className="spacer"></div>
-
-            <div className="spacer-line"> </div>
-                
-            <div className="horizontal-center-text">
-                <p>CWRU MedWish is empowered by its executive board, faculty advisors, MedWish International mentors, and all of its members! Check out our team below.</p>
-            </div>
-
-            <div className="spacer-line"> </div>
-            
-            <div className="spacer"></div>
-
+      <div className="grid-title-group">
+        <div className="grid-title"> 
+          <p>CWRU MedWish Team</p>
         </div>
-    ); 
+        <div className="grid-title-line"></div>
+      </div>
+
+      <div className="images-title-spacer"></div>
+      <div className="spacer"></div>
+
+
+      {/* Cards */}
+      <Card>
+        <CardContent>
+          <Typography variant="h4">{}</Typography>
+          <Grid container spacing={2} className="card-container">
+            
+            {events.map((event) => (
+              <Grid item key={event.id} xs="auto" sm="auto" md="auto">
+                <TeamCard
+                  name={event.name}
+                  position={event.position}
+                  linkedin_link={event.linkedin_link}
+                  mailto_link={event.mailto_link}
+                  image_link={event.image_link}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </CardContent>
+      </Card>
+            
+      <div className="spacer"></div>
+      <div className="spacer-line"> </div>
+      <div className="spacer"></div>
+
+      
+        <div className="contact-title"> 
+          <p>Contact Us</p>
+        </div>
+
+      <div className="email-link">
+        <a href={`mailto:${contactUs_link}`}>cwrumedwish-exec@case.edu</a>
+      </div>
+
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+      
+      <div class="contact-form">
+        <form id="contactForm" >
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" required></input>
+            </div>
+                
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" required></input>
+            </div>
+          </div>
+
+          <div className="spacer"></div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Id</label>
+              <input type="email" id="email" name="email" required></input>
+            </div>
+                
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required></input>
+            </div>
+          </div>
+
+          <div className="spacer"></div>
+              
+
+          <div class="form-group-message">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="5"
+              placeholder="Type your Message"
+              required
+            ></textarea>
+          </div>
+              
+          <div className="spacer"></div>
+
+          <div class="form-group-message">
+            <div className="form-row-message">
+              <div class="form-group-message">
+                <button type="submit" class="submit-button">SEND MESSAGE</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+          
+      <div className="spacer"></div>
+          
+    </div>
+  );  
 }
 
 export default TeamPage;
