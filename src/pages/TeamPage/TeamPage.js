@@ -1,17 +1,39 @@
 // AboutPage.js 
-import React, { useState, useEffect } from "react";
-import { Card, CardMedia, Typography, Divider, Grid, Box, IconButton, CardContent } from '@mui/material';
+import React, { useState, useEffect, useRef } from "react";
+import { Card, Typography, Grid, CardContent } from '@mui/material';
 import "./TeamPage.css"; 
 import teamHeaderImage from './teamHeader.png';
 import TeamCard from './TeamCard';
+import emailjs from 'emailjs-com';
 
 function TeamPage() {
+  
+  /**
+   * Set up Contact Form functionality 
+   */
+  const contactUs_link = "cwrumedwish-exec@case.edu"; 
+
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_zvy9p6a', 'template_tymfij8', form.current, 'OShCyuHkFURY_86Ry')
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Thank you!");
+        },
+        (error) => {
+          console.log(error.text);
+          alert("FAILED...", error);
+        }
+      );
+  };
+  
+
   /**
    * Fetch data from Google Sheets
    */
-
-  const contactUs_link = "cwrumedwish-exec@case.edu"; 
-  
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -55,8 +77,6 @@ function TeamPage() {
       <div className="images-title-spacer"></div>
       <div className="spacer"></div>
 
-
-      {/* Cards */}
       <Card>
         <CardContent>
           <Typography variant="h4">{}</Typography>
@@ -94,7 +114,7 @@ function TeamPage() {
       <div className="spacer"></div>
       
       <div class="contact-form">
-        <form id="contactForm" >
+        <form ref={form} onSubmit={sendEmail}>
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name</label>
@@ -151,8 +171,8 @@ function TeamPage() {
           
       <div className="spacer"></div>
           
-    </div>
-  );  
+    </div>    
+  );    
 }
 
 export default TeamPage;
