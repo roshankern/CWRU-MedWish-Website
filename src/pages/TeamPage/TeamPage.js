@@ -131,7 +131,7 @@ function TeamPage() {
 
           <div class="form-row">
             <div class="form-group">
-              <label for="email">Email Id</label>
+              <label for="email">Email ID</label>
               <input type="email" id="email" name="email" required></input>
             </div>
                 
