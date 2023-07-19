@@ -34,7 +34,7 @@ function TeamCard({ name, position, linkedin_link, mailto_link, image_link }) {
 
       </CardContent>
 
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '40px' }}>
         <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
           <CardMedia
             component="img"
