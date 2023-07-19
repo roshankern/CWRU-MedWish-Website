@@ -38,7 +38,7 @@ function TeamCard({ name, position, linkedin_link, mailto_link, image_link }) {
         <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
           <CardMedia
             component="img"
-            style={{ height: '30px', width: '30px' }}
+            style={{ height: '20px', width: '20px' }}
             image={linkedInImage}
             alt={name}
           />
