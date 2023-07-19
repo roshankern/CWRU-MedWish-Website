@@ -3,9 +3,9 @@ import React from "react";
 import "./EventsPage.css"; // Import the CSS file for styling
 
 
-function EventsPage() {
+function AboutPage() {
     return (
-        <div className="events-page">
+        <div className="about-page">
             <img src="../assets/EventImage.png" alt="Cover Picture" />
             <hr className="line" />
             <div className="content">
@@ -18,4 +18,4 @@ https://community.case.edu/medwish/home                </p>
     );
 }
 
-export default EventsPage;
+export default AboutPage;
