@@ -1,11 +1,11 @@
-// ProjectsPage.js
+// AboutPage.js
 import React from "react";
 import "./ProjectsPage.css"; // Import the CSS file for styling
 
 
-function ProjectsPage() {
+function AboutPage() {
     return (
-        <div className="projects-page">
+        <div className="about-page">
             <img src="../assets/ProjectImage.png" alt="Cover Picture" />
             <hr className="line" />
             <div className="content">
@@ -74,4 +74,4 @@ function ProjectsPage() {
     );
 }
 
-export default ProjectsPage;
+export default AboutPage;
