@@ -14,13 +14,13 @@ import MedWishLogo from './CustomAppBar_MedWishLogo.png';
 const Divider = () => <Box borderRight={1} borderColor="black" mx={2} />;
 
 const MedWishLogoButton = () => (
-    <Box display="flex" justifyContent="left">
+    <Box display="flex" flexGrow={1} justifyContent="left">
         <Button color="secondary" component={RouterLink} to="/" startIcon={<img src={MedWishLogo} alt="MedWish Logo" style={{ height: "40px", objectFit: 'contain' }} />} />
     </Box>
 );
 
 const JoinButton = () => (
-    <Box display="flex" flexGrow={1} justifyContent="flex-end">
+    <Box display="flex" flexGrow={1} justifyContent="right">
         <a
             href="https://community.case.edu/MedWish/club_signup"
             target="_blank"
@@ -39,14 +39,13 @@ const JoinButton = () => (
                 height="25px"
                 cursor="pointer"
             >
-                <Button color="primary" sx={{ textTransform: 'none', padding: 0, minWidth: 0 }}>
+                <Button color="primary" sx={{ textTransform: 'none' }}>
                     Join
                 </Button>
             </Box>
         </a>
     </Box>
 );
-
 
 const WideMenuContent = () => (
     <Box display="flex" justifyContent="center" flexGrow={2}>
@@ -71,6 +70,12 @@ const DrawerContent = () => (
         <Button color="secondary" component={RouterLink} to="/team" sx={{ textTransform: 'none' }}>Team</Button>
     </Box>
 );
+const MobileDrawerContent = () => (
+    <Box display="flex" flexDirection="column" alignItems="center" p={2}>
+        
+        <WideMenuContent />
+    </Box>
+);
 
 function CustomAppBar() {
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -91,14 +96,18 @@ function CustomAppBar() {
 
                         {/* Hamburger Icon in the center */}
                         <IconButton color="secondary" onClick={toggleDrawer(true)}>
-                            <MenuIcon />
+                            <Box display="flex" flexGrow={1} justifyContent="center">
+                                <IconButton color="secondary" onClick={toggleDrawer(true)}>
+                                    <MenuIcon />
+                                </IconButton>
+                            </Box>
                         </IconButton>
 
                         {/* Join Button on the right */}
                         <JoinButton />
 
-                        <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-                            <DrawerContent />
+                        <Drawer anchor="top" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+                            <MobileDrawerContent />
                         </Drawer>
                     </>
                 ) : (
