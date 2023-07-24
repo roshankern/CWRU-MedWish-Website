@@ -11,7 +11,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import MedWishLogo from './CustomAppBar_MedWishLogo.png';
 
-const Divider = () => <Box borderRight={1} borderColor="black" mx={2} />;
+const Divider = () => <Box borderRight={1} borderColor="black" mx={1} />;
 
 const MedWishLogoButton = () => (
     <Box display="flex" flexGrow={1} justifyContent="left">
@@ -59,20 +59,8 @@ const WideMenuContent = () => (
     </Box>
 );
 
-const DrawerContent = () => (
-    <Box display="flex" flexDirection="column" alignItems="center" p={2}>
-        <Button color="secondary" component={RouterLink} to="/about" sx={{ textTransform: 'none' }}>About</Button>
-        <Divider />
-        <Button color="secondary" component={RouterLink} to="/projects" sx={{ textTransform: 'none' }}>Projects</Button>
-        <Divider />
-        <Button color="secondary" component={RouterLink} to="/events" sx={{ textTransform: 'none' }}>Events</Button>
-        <Divider />
-        <Button color="secondary" component={RouterLink} to="/team" sx={{ textTransform: 'none' }}>Team</Button>
-    </Box>
-);
 const MobileDrawerContent = () => (
     <Box display="flex" flexDirection="column" alignItems="center" p={2}>
-        
         <WideMenuContent />
     </Box>
 );
