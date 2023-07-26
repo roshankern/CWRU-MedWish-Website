@@ -31,7 +31,7 @@ function EventsPage() {
    * Groups events by month.
    */
   const groupedEvents = events.reduce((acc, event) => {
-    const eventMonth = new Date(event.date).toLocaleString('default', { month: 'long' });
+    const eventMonth = new Date(event.date_time_start).toLocaleString('default', { month: 'long' });
     if (!acc[eventMonth]) {
       acc[eventMonth] = [];
     }
@@ -70,9 +70,11 @@ function EventsPage() {
                 <Grid item key={event.id} xs={12} sm={6} md={4}>
                   <EventCard
                     name={event.name}
-                    date={event.date}
+                    start={event.date_time_start}
+                    end={event.date_time_end}
                     description={event.description}
                     image={event['image_link']}
+                    location={event.location}
                   />
                 </Grid>
               ))}

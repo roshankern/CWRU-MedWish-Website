@@ -35,18 +35,16 @@ const StyledDivider = styled(Divider)({
  */
 const ProjectCard = ({ project, reverse = false }) => {
   return (
-    <Grid container spacing={2}>
-      {!reverse && (
-        <Grid item xs={12} md={6}>
-          <StyledCard>
-            <StyledImage
-              component="img"
-              alt={project.name}
-              image={project.image_link}
-            />
-          </StyledCard>
-        </Grid>
-      )}
+    <Grid container spacing={2} direction={reverse ? 'row-reverse' : 'row'}>
+      <Grid item xs={12} md={6}>
+        <StyledCard>
+          <StyledImage
+            component="img"
+            alt={project.name}
+            image={project.image_link}
+          />
+        </StyledCard>
+      </Grid>
       <Grid item xs={12} md={6}>
         <StyledCard>
           <Box display="flex" alignItems="center" mb={2}>
@@ -60,17 +58,6 @@ const ProjectCard = ({ project, reverse = false }) => {
           </Typography>
         </StyledCard>
       </Grid>
-      {reverse && (
-        <Grid item xs={12} md={6}>
-          <StyledCard>
-            <StyledImage
-              component="img"
-              alt={project.name}
-              image={project.image_link}
-            />
-          </StyledCard>
-        </Grid>
-      )}
     </Grid>
   )
 };
