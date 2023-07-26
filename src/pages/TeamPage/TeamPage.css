@@ -155,3 +155,8 @@
     width: 90%;
     margin: 0 auto;
   }
+
+  .form-row-message button {
+    width: 175px; 
+    height: 50px; 
+  }
