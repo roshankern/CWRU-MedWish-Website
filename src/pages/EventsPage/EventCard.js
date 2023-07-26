@@ -31,15 +31,19 @@ const createCalendarLink = (event) => {
 /**
  * A card that displays an event.
  */ 
-function EventCard({ name, date, description, image, location }) {
+function EventCard({ name, start, end, description, image, location }) {
+  // Convert start to a Date object and format it to a locale string
+  let startDate = new Date(start);
+  let formattedStartDate = startDate.toLocaleDateString();
+
   let convertedImageLink = image ? convertDriveLink(image) : ""; // add a condition to handle undefined image
-  const calendarLink = createCalendarLink({ name, startDateTime: date, endDateTime: date, description, location });
+  const calendarLink = createCalendarLink({ name, startDateTime: start, endDateTime: end, description, location });
   return (
     <Card>
       <CardMedia component="img" height="200" image={convertedImageLink} alt={name} />
       <CardContent>
         <Typography variant="h5" component="div">
-          {name}
+          {name} : {formattedStartDate}
         </Typography>
         <Typography variant="body1">{description}</Typography>
         {/* Add icon button for Google Calendar link */}
