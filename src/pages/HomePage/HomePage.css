@@ -1,0 +1,7 @@
+.solid-line {
+    width: 50%; /* Adjust the width of the solid line */
+    height: 1px; /* Adjust the height of the solid line */
+    background-color: white;
+    display: inline-block;
+  }
+  
