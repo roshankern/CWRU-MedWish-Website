@@ -32,7 +32,8 @@ const textStyle = {
   fontFamily: "Work Sans, sans-serif",
   color: "white",
   fontSize: "65px", 
-  fontWeight: "600",
+  fontWeight: "400",
+  textAlign: "center",
   zIndex: 1,
 };
 
