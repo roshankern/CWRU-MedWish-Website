@@ -11,7 +11,9 @@ import Equal from '../Images/Equal.png';
 import Environment from '../Images/Environment.png';
 
 
+
 function AboutPage() {
+    const videoID = 'dBmMT5bFjwI'
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('xs'));
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
@@ -42,7 +44,8 @@ function AboutPage() {
                         align='center'
                         style={{
                             position: 'relative',
-                            right: '20%',
+                            right: '30%',
+                            marginRight: '10%',
                             left: '30%',
                             fontFamily: 'Work Sans, sans-serif',
                             fontSize: "150%"
@@ -54,7 +57,7 @@ function AboutPage() {
                     <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '10px 0', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px" }} />
                 </Grid>
                 {/* Holds the 3 Stickers for Recover, Repurpose, and Redistribute */}
-                <Grid container direction="row" xs={12} justifyContent= "center" textAlign= "center" style={{ marginTop: "20px", maxWidth: "100%" }}>
+                <Grid container direction="row" xs={12} justifyContent="center" textAlign="center" style={{ marginTop: "20px", maxWidth: "100%" }}>
                     {/* Holds the What We Do Text */}
                     <Grid xs={12} style={{ marginTop: "10px", marginBottom: "10px" }}>
                         <Typography variant="h1"
@@ -104,7 +107,7 @@ function AboutPage() {
                 </Grid>
 
                 {/*What You Can Do Section on Desktop */}
-                {!isMobile && !isMedium && !isSmall && (
+                {!isMobile && !isMedium && (
                     <>
                         {/* What You Can Do Text and Divider for Desktop */}
                         <Grid container direction="row" xs={12} style={{ marginTop: "20px" }}>
@@ -128,7 +131,7 @@ function AboutPage() {
                             </Grid>
                         </Grid>
                         {/*First Icon and Paragraph on Desktop */}
-                        <Grid container direction="row" spacing={2} xs={7} marginBottom={1} marginTop={2} marginLeft= {2}>
+                        <Grid container direction="row" spacing={2} xs={7} marginBottom={1} marginTop={2} marginLeft={2}>
                             <Grid xs={1}>
                                 <img src={Hands} height={100} width={100} style={{ position: 'relative', marginLeft: "60%", marginBottom: "20%" }} />
                             </Grid>
@@ -152,7 +155,7 @@ function AboutPage() {
                         </Grid>
 
                         {/* Second Icon and Image for Desktop*/}
-                        <Grid container direction="row" xs={7} marginTop={10} marginLeft= {2}>
+                        <Grid container direction="row" xs={7} marginTop={10} marginLeft={2}>
                             <Grid xs={1} style={{ display: 'flex' }}>
                                 <img src={Equal} height={90} width={95} style={{ position: 'relative', marginLeft: "65%", marginBottom: "20%" }} />
                             </Grid>
@@ -175,7 +178,7 @@ function AboutPage() {
                             </Grid>
                         </Grid>
                         {/* Third Icon and Paragraph for Desktop */}
-                        <Grid container direction="row" xs={7} marginTop={10} marginLeft= {2}>
+                        <Grid container direction="row" xs={7} marginTop={10} marginLeft={2}>
                             <Grid xs={1}>
                                 <img src={Environment} height={90} width={95} style={{ position: 'relative', marginLeft: "65%" }} />
                             </Grid>
@@ -198,14 +201,98 @@ function AboutPage() {
                             </Grid>
                         </Grid>
                         {/* Main What We Do Image for Desktop*/}
-                        <Grid container direction="column" textAlign= "right" xs={5} marginLeft={20} marginRight={5} marginTop={8} height="80px" width="500px">
+                        <Grid container direction="column" textAlign="right" xs={5} marginLeft={20} marginRight={5} marginTop={8} height="80px" width="500px">
                             <img src={WhatYouDo} style={{ position: 'relative', left: "125%", bottom: "940%", height: "760px", width: "500px", borderRadius: '16px' }} />
                         </Grid>
                     </>
                 )}
 
                 {/* What You Can Do Section on Mobile */}
-                {isMobile && (
+                {isMobile && !isMedium && (
+                    <>
+                        <Grid container direction="row" xs={12} alignItems="center" style={{ marginTop: "20px" }}>
+                            <Grid item xs={12}>
+                                <Typography variant="h1"
+                                    style={{
+                                        color: '#00355E',
+                                        fontFamily: "Work Sans, sans-serif",
+                                        fontSize: "210%",
+                                        fontWeight: "550",
+                                        textAlign: "center"
+                                    }}
+                                >
+                                    What You Can Do
+                                </Typography>
+                            </Grid>
+                            <Grid item xs={12} container justifyContent="center">
+                                <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '8px 0', color: 'white', width: "270px", marginBottom: "8%", marginTop: "3%" }} />
+                            </Grid>
+
+                            {/* Main What You Can Do Image */}
+                            <Grid item xs={12} style={{ textAlign: 'center' }}>
+                                <img src={WhatYouDo} style={{ position: 'relative', height: "auto", width: "100%", borderRadius: '16px' }} alt="What You Do" />
+                            </Grid>
+                        </Grid>
+
+                        {/* First Icon and Paragraph */}
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <img src={Hands} height={90} width={95} alt="Equal Access" style={{ maxWidth: '100%', textAlign: "center", marginRight: "3%" }} />
+                        </Grid>
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <Typography variant="h1" style={{
+                                color: 'black',
+                                fontFamily: "Work Sans, sans-serif",
+                                fontSize: "120%",
+                                fontWeight: "400",
+                                textAlign: "center",
+                                marginRight: "30%",
+                                marginLeft: "30%",
+                                margin: '0 10%'
+                            }}>
+                                Get hands-on experience troubleshooting, repairing, and working with medical devices. We have a club workshop space in think[box] dedicated to device repair and modifications.
+                            </Typography>
+                        </Grid>
+                        {/* Second Icon and Paragraph */}
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <img src={Equal} height={90} width={95} alt="Equal Access" style={{ maxWidth: '100%' }} />
+                        </Grid>
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <Typography variant="h1" style={{
+                                color: 'black',
+                                fontFamily: "Work Sans, sans-serif",
+                                fontSize: "120%",
+                                fontWeight: "400",
+                                textAlign: "center",
+                                marginRight: "30%",
+                                marginLeft: "30%",
+                                margin: '0 10%'
+                            }}>
+                                Help provide equal access to healthcare across the globe right here in Cleveland. Gain an in-depth understanding of medical devices and the science behind their function.
+                            </Typography>
+                        </Grid>
+                        {/* Third Icon and Paragraph */}
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <img src={Environment} height={90} width={95} alt="Environment" style={{ maxWidth: '100%', textAlign: "center" }} />
+                        </Grid>
+                        <Grid item xs={12} style={{ textAlign: 'center' }}>
+                            <Typography variant="h1" style={{
+                                color: 'black',
+                                fontFamily: "Work Sans, sans-serif",
+                                fontSize: "120%",
+                                fontWeight: "400",
+                                textAlign: "center",
+                                marginRight: "30%",
+                                marginLeft: "30%",
+                                margin: '0 10%'
+                            }}>
+                                Protect the environment by repurposing medical devices and supplies, thus, reducing the harmful effects of medical waste.
+                            </Typography>
+                        </Grid>
+                    </>
+                )}
+
+                {/* What You Can Do for Medium Screens */}
+                {isMedium && (
                     <>
                         <Grid container direction="row" xs={12} alignItems="center" style={{ marginTop: "20px" }}>
                             <Grid item xs={12}>
@@ -291,6 +378,76 @@ function AboutPage() {
                 <Grid xs={12} marginRight={5} style={{ marginBottom: "4%" }}>
                     <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '5px 0', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px" }} />
                 </Grid>
+                
+                {/* MedWish International Section */}
+                <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh'}}>
+                    <Grid column direction="row" justifyContent="center" textAlign="center" alignItems="center" style={{ minHeight: '100vh', textAlign: 'center' }}>
+                        <Grid item xs={12}>
+                            <Typography variant="h1"
+                                align='center'
+                                style={{
+                                    position: "relative",
+                                    color: '#00355E',
+                                    fontFamily: "Work Sans, sans-serif",
+                                    fontWeight: "650",
+                                    marginBottom: "3%"
+                                }}
+                            >
+                                MedWish International
+                            </Typography>
+                        </Grid>
+
+                        {/* MedWish International Paragraph */}
+                        <Grid item xs={8} justifyContent= 'center'>
+                            <Typography variant="body1"
+                                align='center'
+                                style={{
+                                    position: 'relative',
+                                    left: "25%",
+                                    right: '20%',
+                                    fontFamily: 'Work Sans, sans-serif',
+                                    fontSize: "150%",
+                                    marginBottom: "5%"
+                                }}
+                            >
+                                We work with the MedWish International organization to help those in need around the world. Visit MedWish International here and watch their video below to see how we assist the larger community.
+                            </Typography>
+                        </Grid>
+
+                        {/*MedWish International YouTube Video for Desktop*/}
+                        {!isMobile && (
+                            <>
+                                <Grid justifyContent="center" textAlign="center" alignItems="center" marginBottom={1} style={{ position: 'relative' }}>
+                                    <iframe
+                                        title="MedWish International Video"
+                                        width="1000"
+                                        height="550"
+                                        src={`https://www.youtube.com/embed/${videoID}`}
+                                        maxWidth="100%"
+                                    >
+                                    </iframe>
+                                </Grid>
+                            </>
+                        )
+                        }
+                        {/* MedWish International YouTube Video for Mobile */}
+                        {isMobile && (
+                            <>
+                                <Grid justifyContent="center" textAlign="center" alignItems="center">
+                                    <iframe
+                                        title="MedWish International Video"
+                                        width="400"
+                                        height="300"
+                                        src={`https://www.youtube.com/embed/${videoID}`}
+
+                                    >
+                                    </iframe>
+                                </Grid>
+                            </>
+                        )
+                        }
+                    </Grid>
+                </div>
             </Grid>
         </Box>
     )
