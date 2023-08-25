@@ -60,7 +60,8 @@ function EventsPage() {
       {Object.entries(groupedEvents).map(([month, monthEvents]) => (
         <Card key={month} sx={{ mb: 4 }}>
           <CardContent>
-            <Typography variant="h4">{month}</Typography>
+            <Typography variant="h4" style={{ paddingBottom: '10px' }}>{month}</Typography>
+
             <Grid container spacing={2}>
               {monthEvents.map((event) => (
                 <Grid item key={event.id} xs={12} sm={6} md={4}>
