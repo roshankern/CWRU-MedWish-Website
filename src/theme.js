@@ -12,7 +12,6 @@ const theme = createTheme({
         },
     },
     typography: {
-        fontFamily: 'Work Sans, sans-serif', // Use Work Sans as the default font
         h1: {
             fontSize: '2.5rem', // size for h1 elements
         },
