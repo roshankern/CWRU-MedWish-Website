@@ -9,6 +9,7 @@ import Hands from '../Images/Hands.png';
 import WhatYouDo from '../Images/WhatYouDo.png';
 import Equal from '../Images/Equal.png';
 import Environment from '../Images/Environment.png';
+import "./AboutPage.css";
 
 
 
@@ -20,42 +21,23 @@ function AboutPage() {
     const isMedium = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
-        // Overall container for page
-        <Box sx={{ flexGrow: 1 }} boxShadow={"none"}>
+        <div className="AboutPage">
+            <img src={About} className="header-image" alt="Header" />
+
+            {/* Events Page Description */}
+            <div className="spacer"></div>
+            <div className="spacer-line"> </div>
+
+            <div className="text">
+                <p>CWRU MedWish promotes healthcare equity on an international scale assisting MedWish International in processing medical devices. Our priority is to increase access to healthcare globally by repurposing locally donated medical equipment. CWRU MedWish assists in repairing and packaging priority medical devices for use in underserved regions. Our methods of device processing are based on a comprehensive and officially verified understanding of medical device guidelines.</p>
+            </div>
+
+            <div className="spacer-line"> </div>
+            <div className="spacer"></div>
+
+
             {/* Holds the About Header Image */}
             <Grid container direction="row" spacing={2} boxShadow={"none"}>
-                <Grid xs={12} style={{ position: 'relative', marginTop: '17px', marginBottom: '12px' }}>
-                    <Card>
-                        <CardMedia
-                            component="img"
-                            alt="About Image"
-                            image={About}
-                            style={{ height: "auto" }}
-                        />
-                    </Card>
-                </Grid>
-                {/* Holds the First Dividing Line */}
-                <Grid xs={12} marginRight={5}>
-                    <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px", marginTop: "10px" }} />
-                </Grid>
-                {/* Holds the About Intro Paragraph */}
-                <Grid xs={8} style={{ marginTop: "17px", marginBottom: "15px" }}>
-                    <Typography variant="body1"
-                        align='center'
-                        style={{
-                            position: 'relative',
-                            right: '30%',
-                            marginRight: '10%',
-                            left: '30%',
-                            fontFamily: 'Work Sans, sans-serif',
-                            fontSize: "150%"
-                        }}>
-                        CWRU MedWish promotes healthcare equity on an international scale assisting MedWish International in processing medical devices. Our priority is to increase access to healthcare globally by repurposing locally donated medical equipment. CWRU MedWish assists in repairing and packaging priority medical devices for use in underserved regions. Our methods of device processing are based on a comprehensive and officially verified understanding of medical device guidelines.</Typography>
-                </Grid>
-                {/* Holds the Second Divider Line */}
-                <Grid xs={12} marginRight={5}>
-                    <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '10px 0', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px" }} />
-                </Grid>
                 {/* Holds the 3 Stickers for Recover, Repurpose, and Redistribute */}
                 <Grid container direction="row" xs={12} justifyContent="center" textAlign="center" style={{ marginTop: "20px", maxWidth: "100%" }}>
                     {/* Holds the What We Do Text */}
@@ -378,9 +360,9 @@ function AboutPage() {
                 <Grid xs={12} marginRight={5} style={{ marginBottom: "4%" }}>
                     <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '5px 0', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px" }} />
                 </Grid>
-                
+
                 {/* MedWish International Section */}
-                <div style= {{display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh'}}>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
                     <Grid column direction="row" justifyContent="center" textAlign="center" alignItems="center" style={{ minHeight: '100vh', textAlign: 'center' }}>
                         <Grid item xs={12}>
                             <Typography variant="h1"
@@ -398,7 +380,7 @@ function AboutPage() {
                         </Grid>
 
                         {/* MedWish International Paragraph */}
-                        <Grid item xs={8} justifyContent= 'center'>
+                        <Grid item xs={8} justifyContent='center'>
                             <Typography variant="body1"
                                 align='center'
                                 style={{
@@ -449,7 +431,7 @@ function AboutPage() {
                     </Grid>
                 </div>
             </Grid>
-        </Box>
+        </div>
     )
 };
 export default AboutPage;
