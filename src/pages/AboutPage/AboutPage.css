@@ -16,7 +16,30 @@
     line-height: 1.4;
 }
 
-.header-1-text {
-    color: '#6599CC';
-    font-weight: 800;
+.grid-title {
+    color: #00355E;
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 30px;
+    margin-left: 3%;
+}
+
+.grid-title-group {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    margin: 20px auto 0;
+}
+
+.grid-title-line {
+    flex: .9;
+    height: 1px;
+    background-color: #00355E;
+    ;
+}
+
+.grid-text {
+    font-family: "Work Sans", sans-serif;
+    font-size: 150%;
+    font-weight: 400;
 }
