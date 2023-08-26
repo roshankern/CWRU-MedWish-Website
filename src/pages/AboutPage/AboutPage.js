@@ -1,5 +1,7 @@
 //AboutPage.js
 import React from "react";
+
+import { KeyboardDoubleArrowDown, Refresh, KeyboardDoubleArrowUp } from '@mui/icons-material';
 import { Card, CardMedia, Typography, Divider, Grid, Box, autocompleteClasses, useMediaQuery, useTheme } from '@mui/material';
 import About from './images/About.png';
 import Recover from './images/Recover.png';
@@ -10,6 +12,29 @@ import WhatYouDo from './images/WhatYouDo.png';
 import Equal from './images/Equal.png';
 import Environment from './images/Environment.png';
 import "./AboutPage.css";
+
+
+const TextIcon = ({ icon, text }) => {
+    return (
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{
+                backgroundColor: '#7294B6',
+                borderRadius: '50%',
+                width: '90px',
+                height: '90px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+            }}>
+                {React.cloneElement(icon, { style: { fontSize: '80px', fontWeight: 'bold' } })}
+            </div>
+            <div style={{ marginTop: '20px', fontWeight: 'bold', fontSize: '20px' }}>
+                <span>{text}</span>
+            </div>
+        </div>
+    );
+};
+
 
 
 
@@ -39,9 +64,20 @@ function AboutPage() {
                 WHAT WE DO
             </Typography>
 
-            <img src={Recover} height={170} width={160} />
-            <img src={Recover} height={170} width={160} />
-            <img src={Recover} height={170} width={160} />
+
+            <div className="spacer"></div>
+
+            <Grid container spacing={3} justifyContent="center">
+                <Grid item xs={12} sm={4}>
+                    <TextIcon icon={<KeyboardDoubleArrowDown />} text="RECOVER" />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextIcon icon={<Refresh />} text="REPURPOSE" />
+                </Grid>
+                <Grid item xs={12} sm={4}>
+                    <TextIcon icon={<KeyboardDoubleArrowUp />} text="REDISTRIBUTE" />
+                </Grid>
+            </Grid>
 
 
             <Grid container direction="row" spacing={2} boxShadow={"none"}>
