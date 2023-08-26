@@ -149,75 +149,32 @@ function AboutPage() {
                 </div>
             </div>
 
-            {/* MedWish International Section */}
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>
-                <Grid column direction="row" justifyContent="center" textAlign="center" alignItems="center" style={{ minHeight: '100vh', textAlign: 'center' }}>
-                    <Grid item xs={12}>
-                        <Typography variant="h1"
-                            align='center'
-                            style={{
-                                position: "relative",
-                                color: '#00355E',
-                                fontFamily: "Work Sans, sans-serif",
-                                fontWeight: "650",
-                                marginBottom: "3%"
-                            }}
-                        >
-                            MedWish International
-                        </Typography>
-                    </Grid>
+            {/* Holds the MedWish International Paragraph */}
+            <Typography variant="body1"
+                style={{
+                    fontFamily: 'Work Sans, sans-serif',
+                    fontSize: "150%",
+                    padding: '20px'
+                }}
+            >
+                We work with the MedWish International organization to help those in need around the world. Visit MedWish International here and watch their video below to see how we assist the larger community.
+            </Typography>
 
-                    {/* MedWish International Paragraph */}
-                    <Grid item xs={8} justifyContent='center'>
-                        <Typography variant="body1"
-                            align='center'
-                            style={{
-                                position: 'relative',
-                                left: "25%",
-                                right: '20%',
-                                fontFamily: 'Work Sans, sans-serif',
-                                fontSize: "150%",
-                                marginBottom: "5%"
-                            }}
-                        >
-                            We work with the MedWish International organization to help those in need around the world. Visit MedWish International here and watch their video below to see how we assist the larger community.
-                        </Typography>
-                    </Grid>
-
-                    {/*MedWish International YouTube Video for Desktop*/}
-                    {!isMobile && (
-                        <>
-                            <Grid justifyContent="center" textAlign="center" alignItems="center" marginBottom={1} style={{ position: 'relative' }}>
-                                <iframe
-                                    title="MedWish International Video"
-                                    width="1000"
-                                    height="550"
-                                    src={`https://www.youtube.com/embed/${videoID}`}
-                                    maxWidth="100%"
-                                >
-                                </iframe>
-                            </Grid>
-                        </>
-                    )
-                    }
-                    {/* MedWish International YouTube Video for Mobile */}
-                    {isMobile && (
-                        <>
-                            <Grid justifyContent="center" textAlign="center" alignItems="center">
-                                <iframe
-                                    title="MedWish International Video"
-                                    width="400"
-                                    height="300"
-                                    src={`https://www.youtube.com/embed/${videoID}`}
-
-                                >
-                                </iframe>
-                            </Grid>
-                        </>
-                    )
-                    }
-                </Grid>
+            <div style={{ padding: '20px' }}>
+                <div style={{ position: 'relative', paddingBottom: '56.25%', height: '0', overflow: 'hidden' }}>
+                    <iframe
+                        title="MedWish International Video"
+                        src={`https://www.youtube.com/embed/${videoID}`}
+                        style={{ position: 'absolute', top: '0', left: '0', width: '100%', height: '100%' }}
+                    >
+                    </iframe>
+                </div>
             </div>
+
+
+
+            <div className="spacer"></div>
+
 
         </div>
     )
