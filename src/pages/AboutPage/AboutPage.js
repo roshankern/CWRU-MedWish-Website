@@ -67,6 +67,7 @@ function AboutPage() {
 
             <div className="spacer"></div>
 
+            {/* Holds the 3 Stickers for Recover, Repurpose, and Redistribute */}
             <Grid container spacing={3} justifyContent="center">
                 <Grid item xs={12} sm={4}>
                     <TextIcon icon={<KeyboardDoubleArrowDown />} text="RECOVER" />
@@ -79,40 +80,26 @@ function AboutPage() {
                 </Grid>
             </Grid>
 
+            {/* Holds the What We Do Paragraph */}
+            <Typography variant="body1"
+                align="center"
+                style={{
+                    color: 'gray',
+                    fontSize: "150%",
+                    fontWeight: "450",
+                    padding: '20px'
+                }}
+            >
+                MedWish bridges the gap between abundance and absence, surplus, and scarcity. Our
+                work improves access to quality healthcare while promoting enviromental
+                stewardship.
+            </Typography>
+            <div className="spacer"></div>
+
 
             <Grid container direction="row" spacing={2} boxShadow={"none"}>
-                {/* Holds the 3 Stickers for Recover, Repurpose, and Redistribute */}
-                <Grid container direction="row" xs={12} justifyContent="center" textAlign="center" style={{ marginTop: "20px", maxWidth: "100%" }}>
 
-                    <Grid item xs={4}>
-                        <img src={Recover} height={170} width={160} style={{ position: 'relative', boxShadow: 'none', maxWidth: "100%" }} />
-                    </Grid>
-                    <Grid item xs={4}>
-                        <img src={Repurpose} height={150} width={160} style={{ position: 'relative', top: "8%", boxShadow: 'none', maxWidth: "100%" }} />
-                    </Grid>
-                    <Grid item xs={4}>
-                        <img src={Redistribute} height={150} width={170} style={{ position: 'relative', top: "11%", boxShadow: 'none', maxWidth: "100%" }} />
-                    </Grid>
-                </Grid>
-                {/* Holds the What We Do Paragraph */}
-                <Grid xs={10} style={{ marginBottom: "20px", marginTop: "4%" }}>
-                    <Typography variant="body1"
-                        align="center"
-                        style={{
-                            position: 'relative',
-                            right: '20%',
-                            left: '10%',
-                            color: 'gray',
-                            fontFamily: "Work Sans, sans-serif",
-                            fontSize: "150%",
-                            fontWeight: "450",
-                        }}
-                    >
-                        MedWish bridges the gap between abundance and absence, surplus, and scarcity. Our
-                        work improves access to quality healthcare while promoting enviromental
-                        stewardship.
-                    </Typography>
-                </Grid>
+
                 {/* Holds the Third Dividing Line*/}
                 <Grid xs={12} marginRight={5} style={{ marginBottom: "2%" }}>
                     <Divider style={{ borderTopWidth: '1px', borderTopColor: 'gray', height: '0px', margin: '5px 0', color: 'white', position: "relative", left: "25px", right: "130px", marginLeft: "18px", marginRight: "10px" }} />
