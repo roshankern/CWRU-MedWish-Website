@@ -1,14 +1,14 @@
 //AboutPage.js
 import React from "react";
 import { Card, CardMedia, Typography, Divider, Grid, Box, autocompleteClasses, useMediaQuery, useTheme } from '@mui/material';
-import About from '../Images/About.png';
-import Recover from '../Images/Recover.png';
-import Repurpose from '../Images/Repurpose.png';
-import Redistribute from '../Images/Redistribute.png';
-import Hands from '../Images/Hands.png';
-import WhatYouDo from '../Images/WhatYouDo.png';
-import Equal from '../Images/Equal.png';
-import Environment from '../Images/Environment.png';
+import About from './images/About.png';
+import Recover from './images/Recover.png';
+import Repurpose from './images/Repurpose.png';
+import Redistribute from './images/Redistribute.png';
+import Hands from './images/Hands.png';
+import WhatYouDo from './images/WhatYouDo.png';
+import Equal from './images/Equal.png';
+import Environment from './images/Environment.png';
 import "./AboutPage.css";
 
 
@@ -35,24 +35,18 @@ function AboutPage() {
             <div className="spacer-line"> </div>
             <div className="spacer"></div>
 
+            <Typography variant="h1" sx={{ fontWeight: 800, color: '#6599CC' }}>
+                WHAT WE DO
+            </Typography>
 
-            {/* Holds the About Header Image */}
+            <img src={Recover} height={170} width={160} />
+            <img src={Recover} height={170} width={160} />
+            <img src={Recover} height={170} width={160} />
+
+
             <Grid container direction="row" spacing={2} boxShadow={"none"}>
                 {/* Holds the 3 Stickers for Recover, Repurpose, and Redistribute */}
                 <Grid container direction="row" xs={12} justifyContent="center" textAlign="center" style={{ marginTop: "20px", maxWidth: "100%" }}>
-                    {/* Holds the What We Do Text */}
-                    <Grid xs={12} style={{ marginTop: "10px", marginBottom: "10px" }}>
-                        <Typography variant="h1"
-                            align='center'
-                            style={{
-                                position: 'relative',
-                                color: '#6599CC',
-                                fontWeight: '800'
-                            }}
-                        >
-                            WHAT WE DO
-                        </Typography>
-                    </Grid>
 
                     <Grid item xs={4}>
                         <img src={Recover} height={170} width={160} style={{ position: 'relative', boxShadow: 'none', maxWidth: "100%" }} />
