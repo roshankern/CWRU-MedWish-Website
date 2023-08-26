@@ -105,39 +105,37 @@ function AboutPage() {
                 <div className="grid-title-line"></div>
             </div>
 
-            {/*
             <Grid container spacing={3} alignItems="center">
                 <Grid container item xs={12} spacing={3} alignItems="center">
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <img src={Hands} />
                     </Grid>
-                    <Grid item xs={12} md={8} className="grid-text">
+                    <Grid item xs={12} md={9} className="grid-text">
                         <p>Get hands-on experience troubleshooting, repairing, and working with medical devices. We have a club workshop space in think[box] dedicated to device repair and modifications.</p>
                     </Grid>
                 </Grid>
 
                 <Grid container item xs={12} spacing={3} alignItems="center">
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <img src={Equal} />
                     </Grid>
-                    <Grid item xs={12} md={8} className="grid-text">
+                    <Grid item xs={12} md={9} className="grid-text">
                         <p>Help provide equal access to healthcare across the globe right here in Cleveland. Gain an in-depth understanding of medical device and the science behind their function.</p>
                     </Grid>
                 </Grid>
 
                 <Grid container item xs={12} spacing={3} alignItems="center">
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={3}>
                         <img src={Environment} />
                     </Grid>
-                    <Grid item xs={12} md={8} className="grid-text">
+                    <Grid item xs={12} md={9} className="grid-text">
                         <p>Protect the environment by repurposing medical devices and supplies, thus, reducing the harmful effects of medical waste.</p>
                     </Grid>
                 </Grid>
             </Grid>
-*/}
 
 
-            <img src={WhatYouDo} style={{ borderRadius: '20px', width: '40%', height: 'auto' }} />
+            <img src={WhatYouDo} style={{ borderRadius: '20px', width: '50%', height: 'auto' }} />
 
             <div className="spacer"></div>
             <div className="spacer-line"> </div>
