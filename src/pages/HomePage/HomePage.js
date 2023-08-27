@@ -20,7 +20,7 @@ const overlayStyle = {
   left: 0,
   width: "100%",
   height: "100%",
-  backgroundColor: "rgba(0, 0, 0, 0.6)", 
+  backgroundColor: "rgba(0, 0, 0, 0.6)",
   zIndex: 1,
 };
 
@@ -31,7 +31,7 @@ const textStyle = {
   transform: "translate(-50%, -50%)",
   fontFamily: "Work Sans, sans-serif",
   color: "white",
-  fontSize: "65px", 
+  fontSize: "65px",
   fontWeight: "400",
   textAlign: "center",
   zIndex: 1,
@@ -39,20 +39,20 @@ const textStyle = {
 
 const subtextStyle = {
   position: "absolute",
-  bottom: "30px", 
-  width: "100%", 
+  bottom: "30px",
+  width: "100%",
   fontFamily: "Work Sans, sans-serif",
   color: "white",
-  fontSize: "16px", 
+  fontSize: "16px",
   zIndex: 1,
-  textAlign: "center", 
-  whiteSpace: "nowrap", 
+  textAlign: "center",
+  whiteSpace: "nowrap",
 };
 
 function HomePage() {
   return (
     <div style={imageContainerStyle}>
-      <img src={HomePageImage} alt="Home Page Image" style={imageStyle} />
+      <img src={HomePageImage} alt="Home Page" style={imageStyle} />
       <div style={overlayStyle} />
       <Typography variant="h3" style={textStyle}>
         CWRU Medwish

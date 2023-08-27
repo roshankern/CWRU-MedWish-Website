@@ -6,7 +6,7 @@ import { styled } from '@mui/system';
  * Styles for ProjectCard component.
  */
 const StyledCard = styled(Card)({
-  padding: "76px",
+  padding: "30px",
   boxShadow: "none"
 });
 
@@ -26,7 +26,7 @@ const StyledDivider = styled(Divider)({
   marginLeft: "16px",
   height: '50%',
   alignSelf: 'center',
-  borderTopWidth: '2px',
+  borderTopWidth: '1px',
   borderColor: "black"
 });
 
@@ -35,7 +35,8 @@ const StyledDivider = styled(Divider)({
  */
 const ProjectCard = ({ project, reverse = false }) => {
   return (
-    <Grid container spacing={2} direction={reverse ? 'row-reverse' : 'row'}>
+    <Grid container spacing={2} direction={reverse ? 'row-reverse' : 'row'} alignItems='center'>
+
       <Grid item xs={12} md={6}>
         <StyledCard>
           <StyledImage

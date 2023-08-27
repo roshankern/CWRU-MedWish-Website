@@ -1,0 +1,17 @@
+.AboutPage {
+    text-align: center;
+    position: relative;
+}
+
+/* Header Image & Title */
+.header-image {
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    font-size: 18px;
+    padding-left: 10%;
+    padding-right: 10%;
+    line-height: 1.4;
+}
