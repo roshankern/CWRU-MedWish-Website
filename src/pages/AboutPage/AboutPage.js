@@ -10,8 +10,8 @@ import WhatYouDo from './images/WhatYouDo.png';
 import Environment from './images/Environment.png';
 
 import HeaderComponent from "../../components/HeaderComponent.js";
-import "./AboutPage.css";
 import "../../styles.css";
+import "./AboutPage.css";
 
 
 const TextIcon = ({ icon, text }) => {

@@ -1,17 +1,20 @@
 // AboutPage.js 
 import React, { useState, useEffect, useRef } from "react";
 import { Card, Typography, Grid, CardContent } from '@mui/material';
-import "./TeamPage.css"; 
 import teamHeaderImage from './teamHeader.png';
 import TeamCard from './TeamCard';
 import emailjs from 'emailjs-com';
 
+import "./TeamPage.css";
+import HeaderComponent from "../../components/HeaderComponent.js";
+import "../../styles.css";
+
 function TeamPage() {
-  
+
   /**
    * Set up Contact Form functionality 
    */
-  const contactUs_link = "cwrumedwish-exec@case.edu"; 
+  const contactUs_link = "cwrumedwish-exec@case.edu";
 
   const form = useRef();
   const sendEmail = (e) => {
@@ -29,7 +32,7 @@ function TeamPage() {
         }
       );
   };
-  
+
 
   /**
    * Fetch data from Google Sheets
@@ -51,37 +54,32 @@ function TeamPage() {
 
     fetchEvents();
   }, []);
-    
+
   return (
-    <div className="TeamPage"> 
-      
-      <img src={teamHeaderImage} className="header-image" alt="Header"/> 
+    <div className="TeamPage">
+
+      <img src={teamHeaderImage} className="header-image" alt="Header" />
 
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
-                
-      <div className="text">
+
+      <div className="paragraph-text">
         <p>CWRU MedWish is empowered by its executive board, faculty advisors, MedWish International mentors, and all of its members! Check out our team below.</p>
       </div>
 
       <div className="spacer-line"></div>
       <div className="spacer"></div>
 
-      <div className="grid-title-group">
-        <div className="grid-title"> 
-          <p>CWRU MedWish Team</p>
-        </div>
-        <div className="grid-title-line"></div>
-      </div>
+      <HeaderComponent title="CWRU MedWish Team" orientation="left" />
 
       <div className="images-title-spacer"></div>
       <div className="spacer"></div>
 
       <Card>
         <CardContent>
-          <Typography variant="h4">{}</Typography>
+          <Typography variant="h4">{ }</Typography>
           <Grid container spacing={2} className="card-container">
-            
+
             {events.map((event) => (
               <Grid item key={event.id} xs="auto" sm="auto" md="auto">
                 <TeamCard
@@ -96,15 +94,13 @@ function TeamPage() {
           </Grid>
         </CardContent>
       </Card>
-            
+
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
       <div className="spacer"></div>
 
-      
-        <div className="contact-title"> 
-          <p>Contact Us</p>
-        </div>
+
+      <HeaderComponent title="Contact Us" orientation="right" />
 
       <div className="email-link">
         <a href={`mailto:${contactUs_link}`}>cwrumedwish-exec@case.edu</a>
@@ -112,7 +108,7 @@ function TeamPage() {
 
       <div className="spacer"></div>
       <div className="spacer"></div>
-      
+
       <div class="contact-form">
         <form ref={form} onSubmit={sendEmail}>
           <div class="form-row">
@@ -120,7 +116,7 @@ function TeamPage() {
               <label for="firstName">First Name</label>
               <input type="text" id="firstName" name="firstName" required></input>
             </div>
-                
+
             <div class="form-group">
               <label for="lastName">Last Name</label>
               <input type="text" id="lastName" name="lastName" required></input>
@@ -134,7 +130,7 @@ function TeamPage() {
               <label for="email">Email ID</label>
               <input type="email" id="email" name="email" required></input>
             </div>
-                
+
             <div class="form-group">
               <label for="subject">Subject</label>
               <input type="text" id="subject" name="subject" required></input>
@@ -142,7 +138,7 @@ function TeamPage() {
           </div>
 
           <div className="spacer"></div>
-              
+
 
           <div class="form-group-message">
             <label for="message">Message</label>
@@ -154,7 +150,7 @@ function TeamPage() {
               required
             ></textarea>
           </div>
-              
+
           <div className="spacer"></div>
 
           <div class="form-group-message">
@@ -168,11 +164,11 @@ function TeamPage() {
         </form>
 
       </div>
-          
+
       <div className="spacer"></div>
-          
-    </div>    
-  );    
+
+    </div>
+  );
 }
 
 export default TeamPage;

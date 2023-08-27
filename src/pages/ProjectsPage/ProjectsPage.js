@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from './ProjectCard';
 import ProjectImage from './images/ProjectImage.png';
+
 import "./ProjectsPage.css";
+import "../../styles.css";
 
 function ProjectsPage() {
   const [projects, setProjects] = useState([]);
@@ -31,7 +33,7 @@ function ProjectsPage() {
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
 
-      <div className="text">
+      <div className="paragraph-text">
         <p>Members of CWRU MedWish embark on ambitious projects which require the skills and experience they have acquired in class. These projects reinforce this information in an experiential way and allow members to practice planning, communication, and teamwork. Check out some of our current projects below!</p>
       </div>
 

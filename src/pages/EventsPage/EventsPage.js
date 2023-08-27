@@ -3,6 +3,7 @@ import { Card, Typography, Grid, CardContent } from '@mui/material';
 import EventImage from './images/EventImage.png';
 import EventCard from './EventCard';
 import "./EventsPage.css";
+import "../../styles.css";
 
 
 function EventsPage() {
@@ -48,7 +49,7 @@ function EventsPage() {
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
 
-      <div className="text">
+      <div className="paragraph-text">
         <p>CWRU MedWish is active year round! Check out some of our upcoming events below to see how you can help your community and the world. More information about upcoming events can be found at the <a href="https://community.case.edu/medwish/home">CWRU MedWish CampusGroup page</a>.</p>
       </div>
 
