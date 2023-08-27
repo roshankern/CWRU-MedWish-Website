@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from './ProjectCard';
-import { Card, CardMedia, Typography, Divider, Box } from '@mui/material';
 import ProjectImage from './images/ProjectImage.png';
 import "./ProjectsPage.css";
 

@@ -1,7 +1,6 @@
 // Footer.js
 import React from "react";
 import Box from "@mui/material/Box";
-import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
 import InstagramIcon from './instagram_icon.png';
 import CGIcon from './CG_icon.png';
@@ -9,12 +8,12 @@ import FacebookIcon from './facebook_icon.png';
 
 function Footer() {
   return (
-    <Box 
-      display="flex" 
-      justifyContent="center" 
-      alignItems="center" 
-      bgcolor="primary.main" 
-      color="primary.contrastText" 
+    <Box
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      bgcolor="primary.main"
+      color="primary.contrastText"
       py={2}
       borderTop={1}
       borderColor="black"

@@ -2,7 +2,7 @@
 import React from "react";
 
 import { KeyboardDoubleArrowDown, Refresh, KeyboardDoubleArrowUp } from '@mui/icons-material';
-import { Typography, Grid, useMediaQuery, useTheme } from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import About from './images/About.png';
 import Hands from './images/Hands.png';
 import Equal from './images/Equal.png';
@@ -40,10 +40,6 @@ const TextIcon = ({ icon, text }) => {
 
 function AboutPage() {
     const videoID = 'dBmMT5bFjwI'
-    const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down('xs'));
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMedium = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <div className="AboutPage">
@@ -103,7 +99,7 @@ function AboutPage() {
             <Grid container spacing={3} alignItems="center">
                 <Grid container item xs={12} spacing={3} alignItems="center">
                     <Grid item xs={12} md={3}>
-                        <img src={Hands} />
+                        <img src={Hands} alt="Hands On" />
                     </Grid>
                     <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Get hands-on experience troubleshooting, repairing, and working with medical devices. We have a club workshop space in think[box] dedicated to device repair and modifications.</p>
@@ -112,7 +108,7 @@ function AboutPage() {
 
                 <Grid container item xs={12} spacing={3} alignItems="center">
                     <Grid item xs={12} md={3}>
-                        <img src={Equal} />
+                        <img src={Equal} alt="Equality" />
                     </Grid>
                     <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Help provide equal access to healthcare across the globe right here in Cleveland. Gain an in-depth understanding of medical device and the science behind their function.</p>
@@ -121,7 +117,7 @@ function AboutPage() {
 
                 <Grid container item xs={12} spacing={3} alignItems="center">
                     <Grid item xs={12} md={3}>
-                        <img src={Environment} />
+                        <img src={Environment} alt="Environment" />
                     </Grid>
                     <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Protect the environment by repurposing medical devices and supplies, thus, reducing the harmful effects of medical waste.</p>
@@ -131,7 +127,7 @@ function AboutPage() {
 
             <div className="spacer"></div>
 
-            <img src={WhatYouDo} style={{ borderRadius: '20px', width: '50%', height: 'auto' }} />
+            <img src={WhatYouDo} alt="What You Do" style={{ borderRadius: '20px', width: '50%', height: 'auto' }} />
 
             <div className="spacer"></div>
             <div className="spacer-line"> </div>

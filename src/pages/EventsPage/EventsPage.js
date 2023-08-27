@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Card, CardMedia, Typography, Divider, Box, Grid, CardContent } from '@mui/material';
+import { Card, Typography, Grid, CardContent } from '@mui/material';
 import EventImage from './images/EventImage.png';
 import EventCard from './EventCard';
 import "./EventsPage.css";
