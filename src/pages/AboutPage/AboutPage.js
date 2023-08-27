@@ -4,14 +4,14 @@ import React from "react";
 import { KeyboardDoubleArrowDown, Refresh, KeyboardDoubleArrowUp } from '@mui/icons-material';
 import { Card, CardMedia, Typography, Divider, Grid, Box, autocompleteClasses, useMediaQuery, useTheme } from '@mui/material';
 import About from './images/About.png';
-import Recover from './images/Recover.png';
-import Repurpose from './images/Repurpose.png';
-import Redistribute from './images/Redistribute.png';
 import Hands from './images/Hands.png';
-import WhatYouDo from './images/WhatYouDo.png';
 import Equal from './images/Equal.png';
+import WhatYouDo from './images/WhatYouDo.png';
 import Environment from './images/Environment.png';
+
+import HeaderComponent from "../../components/HeaderComponent.js";
 import "./AboutPage.css";
+import "../../styles.css";
 
 
 const TextIcon = ({ icon, text }) => {
@@ -53,7 +53,7 @@ function AboutPage() {
             <div className="spacer"></div>
             <div className="spacer-line"> </div>
 
-            <div className="text">
+            <div className="paragraph-text">
                 <p>CWRU MedWish promotes healthcare equity on an international scale assisting MedWish International in processing medical devices. Our priority is to increase access to healthcare globally by repurposing locally donated medical equipment. CWRU MedWish assists in repairing and packaging priority medical devices for use in underserved regions. Our methods of device processing are based on a comprehensive and officially verified understanding of medical device guidelines.</p>
             </div>
 
@@ -105,12 +105,14 @@ function AboutPage() {
                 <div className="grid-title-line"></div>
             </div>
 
+            <HeaderComponent />
+
             <Grid container spacing={3} alignItems="center">
                 <Grid container item xs={12} spacing={3} alignItems="center">
                     <Grid item xs={12} md={3}>
                         <img src={Hands} />
                     </Grid>
-                    <Grid item xs={12} md={9} className="grid-text">
+                    <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Get hands-on experience troubleshooting, repairing, and working with medical devices. We have a club workshop space in think[box] dedicated to device repair and modifications.</p>
                     </Grid>
                 </Grid>
@@ -119,7 +121,7 @@ function AboutPage() {
                     <Grid item xs={12} md={3}>
                         <img src={Equal} />
                     </Grid>
-                    <Grid item xs={12} md={9} className="grid-text">
+                    <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Help provide equal access to healthcare across the globe right here in Cleveland. Gain an in-depth understanding of medical device and the science behind their function.</p>
                     </Grid>
                 </Grid>
@@ -128,12 +130,13 @@ function AboutPage() {
                     <Grid item xs={12} md={3}>
                         <img src={Environment} />
                     </Grid>
-                    <Grid item xs={12} md={9} className="grid-text">
+                    <Grid item xs={12} md={9} className="paragraph-text">
                         <p>Protect the environment by repurposing medical devices and supplies, thus, reducing the harmful effects of medical waste.</p>
                     </Grid>
                 </Grid>
             </Grid>
 
+            <div className="spacer"></div>
 
             <img src={WhatYouDo} style={{ borderRadius: '20px', width: '50%', height: 'auto' }} />
 
@@ -149,15 +152,9 @@ function AboutPage() {
             </div>
 
             {/* Holds the MedWish International Paragraph */}
-            <Typography variant="body1"
-                style={{
-                    fontFamily: 'Work Sans, sans-serif',
-                    fontSize: "150%",
-                    padding: '20px'
-                }}
-            >
-                We work with the MedWish International organization to help those in need around the world. Visit MedWish International here and watch their video below to see how we assist the larger community.
-            </Typography>
+            <div className="paragraph-text">
+                <p>We work with the MedWish International organization to help those in need around the world. Visit MedWish International here and watch their video below to see how we assist the larger community.</p>
+            </div>
 
             <div style={{ padding: '20px' }}>
                 <div style={{ position: 'relative', paddingBottom: '56.25%', height: '0', overflow: 'hidden' }}>
