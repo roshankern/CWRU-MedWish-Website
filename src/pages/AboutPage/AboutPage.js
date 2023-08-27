@@ -56,9 +56,7 @@ function AboutPage() {
             <div className="spacer-line"> </div>
             <div className="spacer"></div>
 
-            <Typography variant="h1" sx={{ fontWeight: 600, color: '#6599CC' }}>
-                WHAT WE DO
-            </Typography>
+            <HeaderComponent title="What We Do" orientation="left" />
 
 
             <div className="spacer"></div>
@@ -94,7 +92,7 @@ function AboutPage() {
 
             <div className="spacer-line"> </div>
 
-            <HeaderComponent title="What You Can Do" orientation="left" />
+            <HeaderComponent title="What You Can Do" orientation="right" />
 
             <Grid container spacing={3} alignItems="center">
                 <Grid container item xs={12} spacing={3} alignItems="center">
@@ -133,12 +131,7 @@ function AboutPage() {
             <div className="spacer-line"> </div>
             <div className="spacer"></div>
 
-            <div className="grid-title-group">
-                <div className="grid-title-line"></div>
-                <div className="grid-title">
-                    <p>MedWish International</p>
-                </div>
-            </div>
+            <HeaderComponent title="MedWish International" orientation="left" />
 
             {/* Holds the MedWish International Paragraph */}
             <div className="paragraph-text">
