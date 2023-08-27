@@ -2,7 +2,7 @@
 import React from "react";
 
 import { KeyboardDoubleArrowDown, Refresh, KeyboardDoubleArrowUp } from '@mui/icons-material';
-import { Card, CardMedia, Typography, Divider, Grid, Box, autocompleteClasses, useMediaQuery, useTheme } from '@mui/material';
+import { Typography, Grid, useMediaQuery, useTheme } from '@mui/material';
 import About from './images/About.png';
 import Hands from './images/Hands.png';
 import Equal from './images/Equal.png';
@@ -98,14 +98,7 @@ function AboutPage() {
 
             <div className="spacer-line"> </div>
 
-            <div className="grid-title-group">
-                <div className="grid-title">
-                    <p>What You Can Do</p>
-                </div>
-                <div className="grid-title-line"></div>
-            </div>
-
-            <HeaderComponent />
+            <HeaderComponent title="What You Can Do" orientation="left" />
 
             <Grid container spacing={3} alignItems="center">
                 <Grid container item xs={12} spacing={3} alignItems="center">

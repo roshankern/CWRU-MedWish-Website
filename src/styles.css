@@ -8,12 +8,10 @@
     color: #00355E;
     font-size: 40px;
     font-weight: bold;
-    margin-right: 30px;
-    margin-left: 3%;
 }
 
 .header-title-group {
-    width: 90%;
+    width: 100%;
     display: flex;
     align-items: center;
     margin: 20px auto 0;
@@ -21,7 +19,6 @@
 
 .header-title-line {
     flex: .9;
-    height: 1px;
+    height: 10px;
     background-color: #00355E;
-    ;
 }
