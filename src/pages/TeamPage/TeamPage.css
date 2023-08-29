@@ -1,162 +1,156 @@
 .TeamPage {
-    text-align: center;
-    position: relative; 
+  text-align: center;
 }
-  
-  /* Header Image & Title */ 
-  .header-image {
-    width: 100%;
-    height: auto;
-  }
 
-  /* information blurb */ 
-  .info-text {
-    text-align: center; 
-    margin: 16px 0; 
-    font-size: 20px; 
-    margin-left: 100px; 
-    margin-right: 100px; 
-  }
+/* information blurb */
+.info-text {
+  text-align: center;
+  margin: 16px 0;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
 
-  .text {
-    font-size: 18px;
-    padding-left: 10%;
-    padding-right: 10%;
-    line-height: 1.4;
-  }
+.text {
+  font-size: 18px;
+  padding-left: 10%;
+  padding-right: 10%;
+  line-height: 1.4;
+}
 
-  /* Members Grid */ 
-  .grid-title {
-    color: #00355E;
-    font-size: 30px; 
-    font-weight: bold; 
-    margin-right: 30px; 
-    margin-left: 3%; 
-  }
+/* Members Grid */
+.grid-title {
+  color: #00355E;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 30px;
+  margin-left: 3%;
+}
 
-  .grid-title-group {
-    width: 90%;
-    display: flex;
-    align-items: center; 
-    margin: 20px auto 0; 
-  }
-  
-  .grid-title-line {
-    flex: .9; 
-    height: 1px;
-    background-color: #00355E;
-    ;
-  }  
-  
-  /* Extra */ 
-  .spacer-line {
-    text-align: center; 
-    width: 95%;
-    height: 1px;
-    background-color: black;
-    margin: 0 auto; 
-  }
+.grid-title-group {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  margin: 20px auto 0;
+}
 
-  .spacer {
-    height: 16px; 
-  }
+.grid-title-line {
+  flex: .9;
+  height: 1px;
+  background-color: #00355E;
+  ;
+}
 
-  /* Contact Us Title */ 
-  .contact-title {
-    color: #00355E;
-    font-size: 30px;
-    font-weight: bold;
-    text-align: center;
-  }
+/* Extra */
+.spacer-line {
+  text-align: center;
+  width: 95%;
+  height: 1px;
+  background-color: black;
+  margin: 0 auto;
+}
 
-  .email-link {
-    color: black; 
-  }
+.spacer {
+  height: 16px;
+}
 
-  /* Contact Us Email Form */ 
-  .card-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
+/* Contact Us Title */
+.contact-title {
+  color: #00355E;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+}
 
-  .form-group {
-    width: 45%;
-  }
+.email-link {
+  color: black;
+}
 
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    justify-content: left;  
-    text-align: left;  
-  }
+/* Contact Us Email Form */
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
 
-  .form-group button {
-    background-color: blue;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .form-group input {
-    border: none; 
-    width: 100%;
-    padding: 5px;
-    border-color: transparent; 
-    outline: none; 
-    border-bottom: 1px solid black; 
-  }
+.form-group {
+  width: 45%;
+}
 
-  .form-group textarea {
-    resize: vertical;
-    width: 100%;
-    padding: 5px;
-  }  
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  justify-content: left;
+  text-align: left;
+}
 
-  .form-group-message {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    margin: auto; 
-  }
+.form-group button {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-  .form-group-message label {
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-  }
+.form-group input {
+  border: none;
+  width: 100%;
+  padding: 5px;
+  border-color: transparent;
+  outline: none;
+  border-bottom: 1px solid black;
+}
 
-  .form-group-message button {
-    background-color: #6599CC;
-    color: white;
-    border: none;
-    padding: 2% 2%; 
-    border-radius: 30px;
-    cursor: pointer;
-    text-decoration: none; /* Remove underline */
-    width: 20%; 
-    margin: auto;
-  }
+.form-group textarea {
+  resize: vertical;
+  width: 100%;
+  padding: 5px;
+}
 
-  .form-row {
-    display: flex;
-    justify-content: space-between;
-    width: 80%; 
-    margin: 0 auto; 
-  }
+.form-group-message {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
 
-  .form-row-message {
-    display: flex;
-    justify-content: center;
-    width: 90%;
-    margin: 0 auto;
-  }
+.form-group-message label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
 
-  .form-row-message button {
-    width: 175px; 
-    height: 50px; 
-  }
+.form-group-message button {
+  background-color: #6599CC;
+  color: white;
+  border: none;
+  padding: 2% 2%;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  /* Remove underline */
+  width: 20%;
+  margin: auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-row-message {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-row-message button {
+  width: 175px;
+  height: 50px;
+}

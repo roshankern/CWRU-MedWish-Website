@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardMedia, CardContent, Typography } from '@mui/material';
-import mailToImage from './mailToImage.png';
-import linkedInImage from './linkedInImage.png';
+import mailToImage from './images/mailToImage.png';
+import linkedInImage from './images/linkedInImage.png';
 
 function TeamCard({ name, position, linkedin_link, mailto_link, image_link }) {
 
@@ -25,12 +25,12 @@ function TeamCard({ name, position, linkedin_link, mailto_link, image_link }) {
       <CardContent>
         <Typography variant="h5" component="div">
           {name}
-          <br /> 
+          <br />
         </Typography>
 
         <Typography variant="h7" component="div">
           {position}
-          </Typography>
+        </Typography>
 
       </CardContent>
 

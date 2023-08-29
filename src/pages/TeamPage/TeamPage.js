@@ -1,7 +1,7 @@
 // AboutPage.js 
 import React, { useState, useEffect, useRef } from "react";
 import { Card, Typography, Grid, CardContent } from '@mui/material';
-import teamHeaderImage from './teamHeader.png';
+import teamHeaderImage from './images/TeamHeaderPhoto.png';
 import TeamCard from './TeamCard';
 import emailjs from 'emailjs-com';
 

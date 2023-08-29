@@ -1,7 +1,44 @@
-.solid-line {
-    width: 50%; /* Adjust the width of the solid line */
-    height: 1px; /* Adjust the height of the solid line */
-    background-color: white;
-    display: inline-block;
-  }
-  
+.form-group-message {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.form-group-message label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+.form-group-message button {
+  background-color: #6599CC;
+  color: white;
+  border: none;
+  padding: 2% 2%;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  /* Remove underline */
+  width: 20%;
+  margin: auto;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.form-row-message {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.form-row-message button {
+  width: 175px;
+  height: 50px;
+}
