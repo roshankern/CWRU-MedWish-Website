@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Typography, Grid } from '@mui/material';
 
 import HomePageImage from './images/HomePage.png';
@@ -10,6 +11,13 @@ import "../../styles.css";
 import "./HomePage.css";
 
 function HomePage() {
+
+  const navigate = useNavigate();
+
+  const redirectToEvents = () => {
+    navigate("/events");
+  };
+
   return (
     <div className="HomePage">
       <img src={HomePageImage} className="header-image" alt="Header" />
@@ -56,10 +64,13 @@ function HomePage() {
           <div class="form-group-message">
             <div className="form-row-message">
               <div class="form-group-message">
-                <button type="submit" class="submit-button">JOIN</button>
+                <a href="https://community.case.edu/MedWish/club_signup" target="_blank">
+                  <button type="button" class="submit-button">JOIN</button>
+                </a>
               </div>
             </div>
           </div>
+
         </Grid>
 
         <Grid item xs={12} md={6}>
@@ -67,10 +78,10 @@ function HomePage() {
           <div className="paragraph-text">
             <p>Check out our schedule to see what and when you can help! Make sure to sign up for the event on CampusGroups.</p>
           </div>
-          <div class="form-group-message">
+          <div className="form-group-message">
             <div className="form-row-message">
-              <div class="form-group-message">
-                <button type="submit" class="submit-button">SEE SCHEDULE</button>
+              <div className="form-group-message">
+                <button type="button" class="submit-button" onClick={redirectToEvents}>SEE SCHEDULE</button>
               </div>
             </div>
           </div>
