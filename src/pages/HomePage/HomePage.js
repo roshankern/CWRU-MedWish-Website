@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { Typography, Grid } from '@mui/material';
+import { Grid } from '@mui/material';
 
 import HomePageImage from './images/HomePage.png';
 import HomeImage1 from './images/HomeImage1.png';
@@ -13,9 +13,12 @@ import "./HomePage.css";
 function HomePage() {
 
   const navigate = useNavigate();
-
   const redirectToEvents = () => {
     navigate("/events");
+  };
+
+  const onJoinClick = () => {
+    window.open("https://community.case.edu/MedWish/club_signup", "_blank");
   };
 
   return (
@@ -64,9 +67,7 @@ function HomePage() {
           <div class="form-group-message">
             <div className="form-row-message">
               <div class="form-group-message">
-                <a href="https://community.case.edu/MedWish/club_signup" target="_blank">
-                  <button type="button" class="submit-button">JOIN</button>
-                </a>
+                <button type="button" class="submit-button" onClick={onJoinClick}>JOIN</button>
               </div>
             </div>
           </div>
