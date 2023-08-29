@@ -20,15 +20,15 @@ function TeamPage() {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_zvy9p6a', 'template_tymfij8', form.current, 'OShCyuHkFURY_86Ry')
+    emailjs.sendForm('service_3m98i5g', 'template_8e857lb', form.current, 'IzIVja4KQkgUBxeDk')
       .then(
         (result) => {
           console.log(result.text);
-          alert("Thank you!");
+          alert("Message sent, thank you!");
         },
         (error) => {
           console.log(error.text);
-          alert("FAILED...", error);
+          alert("Message send error. Please refresh and try again.", error);
         }
       );
   };
