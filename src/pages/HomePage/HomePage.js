@@ -1,5 +1,5 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
+import { Typography, Grid } from '@mui/material';
 
 import HomePageImage from './images/HomePage.png';
 import HomeImage1 from './images/HomeImage1.JPG';
@@ -19,17 +19,29 @@ function HomePage() {
 
       <HeaderComponent title="About Us" orientation="left" />
 
-      <div className="paragraph-text">
-        <p>CWRU MedWish promotes healthcare equity on an international scale assisting MedWish International in processing medical devices. Our priority is to increase access to healthcare globally by repurposing locally donated medical equipment. CWRU MedWish assists in repairing and packaging priority medical devices for use in underserved regions. Our methods of device processing are based on a comprehensive and officially verified understanding of medical device guidelines.</p>
-      </div>
+      <Grid container spacing={3}>
+        <Grid item xs={12} md={6}>
+          <div className="paragraph-text">
+            <p>We are a group of Case Western Reserve University students who work with the not-for-profit organization MedWish International to repair discarded medical equipment and ship this equipment to countries in need.</p>
+          </div>
+        </Grid>
 
-      <img src={HomeImage1} className="header-image" alt="Header" />
+        <Grid item xs={12} md={6}>
+          <img src={HomeImage1} className="header-image" alt="Header" />
+        </Grid>
 
-      <div className="paragraph-text">
-        <p>CWRU MedWish promotes healthcare equity on an international scale assisting MedWish International in processing medical devices. Our priority is to increase access to healthcare globally by repurposing locally donated medical equipment. CWRU MedWish assists in repairing and packaging priority medical devices for use in underserved regions. Our methods of device processing are based on a comprehensive and officially verified understanding of medical device guidelines.</p>
-      </div>
+        <Grid item xs={12} md={6}>
+          <img src={HomeImage2} className="header-image" alt="Header" />
+        </Grid>
 
-      <img src={HomeImage2} className="header-image" alt="Header" />
+        <Grid item xs={12} md={6}>
+          <div className="paragraph-text">
+            <p>CWRU MedWish takes volunteer trips downtown to the headquarters of MedWish International. We triage, test, repair and package medical devices. In addition to our regular trips, we host informational workshops for members to learn more about biomedical engineering.</p>
+          </div>
+        </Grid>
+
+
+      </Grid>
 
 
 
