@@ -42,34 +42,43 @@ function HomePage() {
       </Grid>
 
       <div className="spacer"></div>
-      <div className="spacer-line"> </div>
       <div className="spacer"></div>
 
-      <HeaderComponent title="Help Us" orientation="left" />
-      <div className="paragraph-text">
-        <p>Join the CWRU MedWish club on CampusGroups to get email updates and and volunteer with us.</p>
-      </div>
-      <div class="form-group-message">
-        <div className="form-row-message">
-          <div class="form-group-message">
-            <button type="submit" class="submit-button">JOIN</button>
+      <div className="spacer-line"> </div>
+
+      <Grid container spacing={3} style={{ paddingLeft: '20px', paddingRight: '20px' }} alignItems="center">
+
+        <Grid item xs={12} md={6}>
+          <HeaderComponent title="Help Us" orientation="left" />
+          <div className="paragraph-text">
+            <p>Join the CWRU MedWish club on CampusGroups to get email updates and and volunteer with us.</p>
           </div>
-        </div>
-      </div>
-
-      <HeaderComponent title="Schedule" orientation="left" />
-      <div className="paragraph-text">
-        <p>Check out our schedule to see what and when you can help! Make sure to sign up for the event on CampusGroups.</p>
-      </div>
-      <div class="form-group-message">
-        <div className="form-row-message">
           <div class="form-group-message">
-            <button type="submit" class="submit-button">SEE SCHEDULE</button>
+            <div className="form-row-message">
+              <div class="form-group-message">
+                <button type="submit" class="submit-button">JOIN</button>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </Grid>
 
+        <Grid item xs={12} md={6}>
+          <HeaderComponent title="Schedule" orientation="left" />
+          <div className="paragraph-text">
+            <p>Check out our schedule to see what and when you can help! Make sure to sign up for the event on CampusGroups.</p>
+          </div>
+          <div class="form-group-message">
+            <div className="form-row-message">
+              <div class="form-group-message">
+                <button type="submit" class="submit-button">SEE SCHEDULE</button>
+              </div>
+            </div>
+          </div>
+        </Grid>
+      </Grid>
 
+      <div className="spacer"></div>
+      <div className="spacer"></div>
 
     </div>
   );
