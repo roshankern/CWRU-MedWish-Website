@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Card, Typography, Grid, CardContent } from '@mui/material';
 import teamHeaderImage from './images/TeamHeaderPhoto.png';
+import linkedInImage from './images/linkedInImage.png';
 import TeamCard from './TeamCard';
 import emailjs from 'emailjs-com';
 
@@ -11,9 +12,6 @@ import "../../styles.css";
 
 function TeamPage() {
 
-  /**
-   * Set up Contact Form functionality 
-   */
   const contactUs_link = "cwrumedwish-exec@case.edu";
 
   const form = useRef();
@@ -33,10 +31,6 @@ function TeamPage() {
       );
   };
 
-
-  /**
-   * Fetch data from Google Sheets
-   */
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
@@ -54,6 +48,22 @@ function TeamPage() {
 
     fetchEvents();
   }, []);
+
+  const DevProfileCard = ({ name, role, linkedin_link }) => {
+    return (
+      <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+        <div>
+          <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
+            <img src={linkedInImage} alt={`${name}'s LinkedIn`} style={{ width: '50px', height: '50px' }} />
+          </a>
+          <div style={{ margin: '0' }}>
+            <h3 style={{ margin: '10px' }}>{name}</h3>
+            <p style={{ margin: '0' }}>{role}</p>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div className="TeamPage">
@@ -99,8 +109,21 @@ function TeamPage() {
       <div className="spacer-line"> </div>
       <div className="spacer"></div>
 
+      <HeaderComponent title="Website Developers" orientation="right" />
 
-      <HeaderComponent title="Contact Us" orientation="right" />
+
+      <DevProfileCard
+        name="John Doe"
+        role="Software Engineer"
+        linkedin_link="https://www.linkedin.com/in/johndoe/"
+      />
+
+      <div className="spacer"></div>
+      <div className="spacer-line"> </div>
+      <div className="spacer"></div>
+
+
+      <HeaderComponent title="Contact Us" orientation="left" />
 
       <div className="email-link">
         <a href={`mailto:${contactUs_link}`}>cwrumedwish-exec@case.edu</a>
