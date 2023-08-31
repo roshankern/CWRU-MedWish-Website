@@ -14,7 +14,7 @@ function ProjectsPage() {
   };
 
   useEffect(() => {
-    fetch("https://sheetdb.io/api/v1/h9ubv4uj59j4c")
+    fetch("https://sheetdb.io/api/v1/26zl0s3h1avn3")
       .then(response => response.json())
       .then(data => {
         const convertedData = data.map(project => ({
