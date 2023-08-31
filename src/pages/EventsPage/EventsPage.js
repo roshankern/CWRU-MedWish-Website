@@ -17,7 +17,7 @@ function EventsPage() {
     const fetchEvents = async () => {
       try {
         const response = await fetch(
-          "https://sheetdb.io/api/v1/1y5oetslldbzr"
+          "https://sheetdb.io/api/v1/h9ubv4uj59j4c"
         );
         const data = await response.json();
         setEvents(data);

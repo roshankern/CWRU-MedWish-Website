@@ -1,65 +1,97 @@
 import React from "react";
-import HomePageImage from './images/homepage-image_photo_noise2_scale_cropped_photo_noise2_scale.png';
-import Typography from "@mui/material/Typography";
-import "./HomePage.css"; // Import the CSS file for additional styling
+import { useNavigate } from "react-router-dom";
+import { Grid } from '@mui/material';
 
-const imageContainerStyle = {
-  position: "relative",
-  width: "100%",
-};
+import HomePageImage from './images/HomePage.png';
+import HomeImage1 from './images/HomeImage1.png';
+import HomeImage2 from './images/HomeImage2.png';
 
-const imageStyle = {
-  width: "100%",
-  height: "auto",
-  objectFit: "cover",
-};
-
-const overlayStyle = {
-  position: "absolute",
-  top: 0,
-  left: 0,
-  width: "100%",
-  height: "100%",
-  backgroundColor: "rgba(0, 0, 0, 0.6)",
-  zIndex: 1,
-};
-
-const textStyle = {
-  position: "absolute",
-  top: "50%",
-  left: "50%",
-  transform: "translate(-50%, -50%)",
-  fontFamily: "Work Sans, sans-serif",
-  color: "white",
-  fontSize: "65px",
-  fontWeight: "400",
-  textAlign: "center",
-  zIndex: 1,
-};
-
-const subtextStyle = {
-  position: "absolute",
-  bottom: "30px",
-  width: "100%",
-  fontFamily: "Work Sans, sans-serif",
-  color: "white",
-  fontSize: "16px",
-  zIndex: 1,
-  textAlign: "center",
-  whiteSpace: "nowrap",
-};
+import HeaderComponent from "../../components/HeaderComponent.js";
+import "../../styles.css";
+import "./HomePage.css";
 
 function HomePage() {
+
+  const navigate = useNavigate();
+  const redirectToEvents = () => {
+    navigate("/events");
+  };
+
+  const onJoinClick = () => {
+    window.open("https://community.case.edu/MedWish/club_signup", "_blank");
+  };
+
   return (
-    <div style={imageContainerStyle}>
-      <img src={HomePageImage} alt="Home Page" style={imageStyle} />
-      <div style={overlayStyle} />
-      <Typography variant="h3" style={textStyle}>
-        CWRU Medwish
-      </Typography>
-      <Typography variant="h6" style={subtextStyle}>
-        &gt; 800 members + alumni   <span className="solid-line"></span>   &gt; 100 events completed
-      </Typography>
+    <div className="HomePage">
+      <img src={HomePageImage} className="header-image" alt="Header" />
+
+      <div className="spacer"></div>
+      <div className="spacer-line"> </div>
+
+      <HeaderComponent title="About Us" orientation="left" />
+
+      <Grid container spacing={3} style={{ paddingLeft: '20px', paddingRight: '20px' }} alignItems="center">
+        <Grid item xs={12} md={6}>
+          <div className="paragraph-text">
+            <p>We are a group of Case Western Reserve University students who work with the not-for-profit organization MedWish International to repair discarded medical equipment and ship this equipment to countries in need.</p>
+          </div>
+        </Grid>
+
+        <Grid item xs={12} md={6}>
+          <img src={HomeImage1} className="header-image" alt="Header" style={{ borderRadius: '20px' }} />
+        </Grid>
+
+        <Grid item xs={12} md={6}>
+          <img src={HomeImage2} className="header-image" alt="Header" style={{ borderRadius: '20px' }} />
+        </Grid>
+
+        <Grid item xs={12} md={6}>
+          <div className="paragraph-text">
+            <p>CWRU MedWish takes volunteer trips downtown to the headquarters of MedWish International. We triage, test, repair and package medical devices. In addition to our regular trips, we host informational workshops for members to learn more about biomedical engineering.</p>
+          </div>
+        </Grid>
+      </Grid>
+
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+
+      <div className="spacer-line"> </div>
+
+      <Grid container spacing={3} style={{ paddingLeft: '20px', paddingRight: '20px' }} alignItems="center">
+
+        <Grid item xs={12} md={6}>
+          <HeaderComponent title="Help Us" orientation="left" />
+          <div className="paragraph-text">
+            <p>Join the CWRU MedWish club on CampusGroups to get email updates and and volunteer with us.</p>
+          </div>
+          <div class="form-group-message">
+            <div className="form-row-message">
+              <div class="form-group-message">
+                <button type="button" class="submit-button" onClick={onJoinClick}>JOIN</button>
+              </div>
+            </div>
+          </div>
+
+        </Grid>
+
+        <Grid item xs={12} md={6}>
+          <HeaderComponent title="Schedule" orientation="left" />
+          <div className="paragraph-text">
+            <p>Check out our schedule to see what and when you can help! Make sure to sign up for the event on CampusGroups.</p>
+          </div>
+          <div className="form-group-message">
+            <div className="form-row-message">
+              <div className="form-group-message">
+                <button type="button" class="submit-button" onClick={redirectToEvents}>SEE SCHEDULE</button>
+              </div>
+            </div>
+          </div>
+        </Grid>
+      </Grid>
+
+      <div className="spacer"></div>
+      <div className="spacer"></div>
+
     </div>
   );
 }

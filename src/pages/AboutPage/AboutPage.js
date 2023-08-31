@@ -125,7 +125,7 @@ function AboutPage() {
 
             <div className="spacer"></div>
 
-            <img src={WhatYouDo} alt="What You Do" style={{ borderRadius: '20px', width: '50%', height: 'auto' }} />
+            <img src={WhatYouDo} alt="What You Do" style={{ borderRadius: '20px', width: '90%', height: 'auto' }} />
 
             <div className="spacer"></div>
             <div className="spacer-line"> </div>
