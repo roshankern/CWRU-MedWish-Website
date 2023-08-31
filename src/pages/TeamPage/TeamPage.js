@@ -117,7 +117,7 @@ function TeamPage() {
           <DevProfileCard
             name="Roshan Kern"
             role="Project Manager"
-            linkedin_link="https://www.linkedin.com/in/roshan-kern-9339b9221/"
+            linkedin_link="https://www.linkedin.com/in/roshan-kern/"
           />
         </Grid>
 
@@ -141,7 +141,7 @@ function TeamPage() {
           <DevProfileCard
             name="Khanh Khuat"
             role="Programmer"
-            linkedin_link="https://www.linkedin.com/in/404/"
+            linkedin_link="https://www.linkedin.com/in/khanhkhuat/"
           />
         </Grid>
 
