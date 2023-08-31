@@ -113,9 +113,45 @@ function TeamPage() {
 
 
       <DevProfileCard
-        name="John Doe"
-        role="Software Engineer"
-        linkedin_link="https://www.linkedin.com/in/johndoe/"
+        name="Roshan Kern"
+        role="Project Manager"
+        linkedin_link="https://www.linkedin.com/in/roshan-kern-9339b9221/"
+      />
+
+      <DevProfileCard
+        name="Zoe Goldberg"
+        role="ACMW Ambassador"
+        linkedin_link="https://www.linkedin.com/in/zmgoldberg/"
+      />
+
+      <DevProfileCard
+        name="Arohi Mehta"
+        role="ACMW Ambassador"
+        linkedin_link="https://www.linkedin.com/in/arohi-mehta/"
+      />
+
+      <DevProfileCard
+        name="Khanh Khuat"
+        role="Programmer"
+        linkedin_link="https://www.linkedin.com/in/404/"
+      />
+
+      <DevProfileCard
+        name="Jaiden Borowski"
+        role="Programmer"
+        linkedin_link="https://www.linkedin.com/in/jaiden-borowski/"
+      />
+
+      <DevProfileCard
+        name="Shravani Suram"
+        role="Programmer"
+        linkedin_link="https://www.linkedin.com/in/shravani-suram"
+      />
+
+      <DevProfileCard
+        name="Jessica Shue"
+        role="Designer"
+        linkedin_link="https://www.linkedin.com/in/jessica-s-7b7935268/"
       />
 
       <div className="spacer"></div>
