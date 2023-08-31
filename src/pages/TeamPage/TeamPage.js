@@ -111,49 +111,67 @@ function TeamPage() {
 
       <HeaderComponent title="Website Developers" orientation="right" />
 
+      <Grid container spacing={2} className="card-container">
 
-      <DevProfileCard
-        name="Roshan Kern"
-        role="Project Manager"
-        linkedin_link="https://www.linkedin.com/in/roshan-kern-9339b9221/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Roshan Kern"
+            role="Project Manager"
+            linkedin_link="https://www.linkedin.com/in/roshan-kern-9339b9221/"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Zoe Goldberg"
-        role="ACMW Ambassador"
-        linkedin_link="https://www.linkedin.com/in/zmgoldberg/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Zoe Goldberg"
+            role="ACMW Ambassador"
+            linkedin_link="https://www.linkedin.com/in/zmgoldberg/"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Arohi Mehta"
-        role="ACMW Ambassador"
-        linkedin_link="https://www.linkedin.com/in/arohi-mehta/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Arohi Mehta"
+            role="ACMW Ambassador"
+            linkedin_link="https://www.linkedin.com/in/arohi-mehta/"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Khanh Khuat"
-        role="Programmer"
-        linkedin_link="https://www.linkedin.com/in/404/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Khanh Khuat"
+            role="Programmer"
+            linkedin_link="https://www.linkedin.com/in/404/"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Jaiden Borowski"
-        role="Programmer"
-        linkedin_link="https://www.linkedin.com/in/jaiden-borowski/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Jaiden Borowski"
+            role="Programmer"
+            linkedin_link="https://www.linkedin.com/in/jaiden-borowski/"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Shravani Suram"
-        role="Programmer"
-        linkedin_link="https://www.linkedin.com/in/shravani-suram"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Shravani Suram"
+            role="Programmer"
+            linkedin_link="https://www.linkedin.com/in/shravani-suram"
+          />
+        </Grid>
 
-      <DevProfileCard
-        name="Jessica Shue"
-        role="Designer"
-        linkedin_link="https://www.linkedin.com/in/jessica-s-7b7935268/"
-      />
+        <Grid item xs="auto" sm="auto" md="auto">
+          <DevProfileCard
+            name="Jessica Shue"
+            role="Designer"
+            linkedin_link="https://www.linkedin.com/in/jessica-s-7b7935268/"
+          />
+        </Grid>
 
+      </Grid>
+
+      <div className="spacer"></div>
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
       <div className="spacer"></div>
