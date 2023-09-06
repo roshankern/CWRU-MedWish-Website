@@ -11,7 +11,7 @@ const FadeInComponent = ({ children }) => {
     const clonedChildren = React.cloneElement(children, { onLoad: handleOnLoad });
 
     return (
-        <Fade in={show} timeout={1000}>
+        <Fade in={show} timeout={2000}>
             {clonedChildren}
         </Fade>
     );
