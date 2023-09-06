@@ -7,6 +7,7 @@ import HomeImage1 from './images/HomeImage1.png';
 import HomeImage2 from './images/HomeImage2.png';
 
 import HeaderComponent from "../../components/HeaderComponent.js";
+import FadeInComponent from "../../components/FadeInComponent.js";
 import "../../styles.css";
 import "./HomePage.css";
 
@@ -23,7 +24,9 @@ function HomePage() {
 
   return (
     <div className="HomePage">
-      <img src={HomePageImage} className="header-image" alt="Header" />
+      <FadeInComponent>
+        <img src={HomePageImage} className="header-image" alt="Header" />
+      </FadeInComponent>
 
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
