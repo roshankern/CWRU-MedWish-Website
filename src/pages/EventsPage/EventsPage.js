@@ -4,6 +4,7 @@ import EventImage from './images/EventImage.png';
 import EventCard from './EventCard';
 import "./EventsPage.css";
 import "../../styles.css";
+import FadeInComponent from "../../components/FadeInComponent.js";
 
 
 function EventsPage() {
@@ -43,7 +44,9 @@ function EventsPage() {
 
   return (
     <div className="EventsPage">
-      <img src={EventImage} className="header-image" alt="Header" />
+      <FadeInComponent>
+        <img src={EventImage} className="header-image" alt="Header" />
+      </FadeInComponent>
 
       {/* Events Page Description */}
       <div className="spacer"></div>

@@ -8,6 +8,7 @@ import emailjs from 'emailjs-com';
 
 import "./TeamPage.css";
 import HeaderComponent from "../../components/HeaderComponent.js";
+import FadeInComponent from "../../components/FadeInComponent.js";
 import "../../styles.css";
 
 function TeamPage() {
@@ -67,8 +68,10 @@ function TeamPage() {
 
   return (
     <div className="TeamPage">
+      <FadeInComponent>
+        <img src={teamHeaderImage} className="header-image" alt="Header" />
+      </FadeInComponent>
 
-      <img src={teamHeaderImage} className="header-image" alt="Header" />
 
       <div className="spacer"></div>
       <div className="spacer-line"> </div>

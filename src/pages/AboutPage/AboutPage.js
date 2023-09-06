@@ -10,6 +10,7 @@ import WhatYouDo from './images/WhatYouDo.png';
 import Environment from './images/Environment.png';
 
 import HeaderComponent from "../../components/HeaderComponent.js";
+import FadeInComponent from "../../components/FadeInComponent.js";
 import "../../styles.css";
 import "./AboutPage.css";
 
@@ -43,7 +44,9 @@ function AboutPage() {
 
     return (
         <div className="AboutPage">
-            <img src={About} className="header-image" alt="Header" />
+            <FadeInComponent>
+                <img src={About} className="header-image" alt="Header" />
+            </FadeInComponent>
 
             {/* Events Page Description */}
             <div className="spacer"></div>

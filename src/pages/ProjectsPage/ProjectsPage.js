@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ProjectCard from './ProjectCard';
 import ProjectImage from './images/ProjectImage.png';
+import FadeInComponent from "../../components/FadeInComponent.js";
 
 import "./ProjectsPage.css";
 import "../../styles.css";
@@ -28,7 +29,9 @@ function ProjectsPage() {
 
   return (
     <div className="ProjectsPage">
-      <img src={ProjectImage} className="header-image" alt="Header" />
+      <FadeInComponent>
+        <img src={ProjectImage} className="header-image" alt="Header" />
+      </FadeInComponent>
 
       <div className="spacer"></div>
       <div className="spacer-line"> </div>
