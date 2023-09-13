@@ -18,9 +18,8 @@ function App() {
       <Router>
         <CustomAppBar />
         <Routes>
-          <Route path="/" element={<Navigate to="/home" />} />
-          <Route path="/cwru-medwish-website" element={<Navigate to="/home" />} />
-          <Route path="/home" element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<Navigate to="/" />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/events" element={<EventsPage />} />
